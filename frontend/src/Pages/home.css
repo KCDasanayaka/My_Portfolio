@@ -1,0 +1,55 @@
+body{
+    background-color: white;
+}
+
+.firstScreen{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.firstLeft{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .firstLine{
+        color: #2AD87F;
+        font-size: 50px;
+        font-weight: 600;
+        margin: auto;
+    }
+    .secLine{
+        color: #1E242B;
+        font-size: 85px;
+        margin: auto;
+        text-transform: uppercase;
+    }
+}
+.hidden {
+    opacity: 0;
+  }
+  
+  .console-container {
+    font-size: 4em; /* Adjust as needed for your design */
+    font-weight: 700;
+    text-align: center;
+    display: block;
+    margin: auto;
+    width: 600px; /* Adjust based on your needs */
+  }
+  
+  .console-underscore {
+    display: inline-block;
+    position: relative;
+    top: -0.14em;
+    left: 10px;
+  }
+  
+  .socialMedia{
+    display: flex;
+    flex-direction: row;
+    gap: 30px; 
+  }
+  .socialMedia img{
+        width: 50px;
+    }
