@@ -1,5 +1,6 @@
 body{
     background-color: white;
+
 }
 
 .firstScreen{
@@ -8,33 +9,34 @@ body{
     align-items: center;
     flex: 2;
 }
-.firstLeft{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 30%;
-    flex: 1;
-
-    .firstLine{
-        color: #2AD87F;
-        font-size: 200%;
-        font-weight: 600;
-        margin: auto 0;
-        
-    }
-    .secLine{
-        color: #1E242B;
-        font-size: 350%;
-        text-transform: uppercase;
-        margin: auto 0;
-    }
+.firstLeft {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
 }
+
+.firstLeft .firstLine {
+  color: #2AD87F;
+  font-size: 200%; /* Default size */
+  font-weight: 600;
+  margin: auto 0;
+}
+
+.firstLeft .secLine {
+  color: #1E242B;
+  font-size: 350%; /* Default size */
+  text-transform: uppercase;
+  margin: auto 0;
+}
+
 .hidden {
     opacity: 0;
   }
   
   .console-container {
-    font-size: 3.5em; /* Adjust as needed for your design */
+    font-size: 300%;
+    width: 90%;
     font-weight: 700;
     text-align: center;
     display: block;
@@ -68,26 +70,32 @@ body{
   flex: 1;
 }
 .firstRight img{
-    width: 50%;
+    min-width: 40%;
+    max-width: 50%;
 }
 
 @media screen and (max-width: 768px) {
     .firstScreen {
-      flex-direction: column; /* Stack content vertically */
+      flex-direction: column-reverse; /* Stack content vertically */
       align-items: center;
       text-align: center;
+      max-width:768px ;
     }
   
-    .firstLine {
-      font-size: 2em; /* Adjust font size for tablets */
-    }
-  
-    .secLine {
-      font-size: 50px; /* Adjust font size for tablets */
-    }
+    .firstLeft {
+       /* Adjust alignment if needed */
+  }
+
+  .firstLeft .firstLine {
+      font-size: 150%; /* Adjust font size for tablets */
+  }
+
+  .firstLeft .secLine {
+      font-size: 250%; /* Adjust font size for tablets */
+  }
   
     .console-container {
-      font-size: 2.5em; /* Smaller font for console text */
+      font-size: 150%; /* Smaller font for console text */
       width: 80%; /* Adjust width */
     }
   
@@ -107,16 +115,26 @@ body{
   
   /* Mobile Styles */
   @media screen and (max-width: 480px) {
-    .firstLine {
+    .firstScreen{
+      flex-direction: column-reverse;
+    }
+    .firstLeft {
+      display: flex;
+
+      align-items: center; /* Center align on smaller screens */
+      text-align: center;  /* Ensure text is centered */
+  }
+
+  .firstLeft .firstLine {
       font-size: 100%; /* Smaller font for mobile */
-    }
-  
-    .secLine {
-      font-size: 200% /* Smaller font for mobile */
-    }
+  }
+
+  .firstLeft .secLine {
+      font-size: 150%; /* Smaller font for mobile */
+  }
   
     .console-container {
-      font-size: 2em; /* Smaller font for mobile */
+      font-size: 80%; /* Smaller font for mobile */
       width: 90%; /* Full width for mobile */
     }
   
@@ -136,3 +154,27 @@ body{
       width: 80%; /* Make image smaller */
     }
   }
+
+
+
+
+/* Small Mobile Phones */
+@media screen and (max-width: 320px) {
+  .console-container {
+      font-size: 50%;
+      width: 95%;
+  }
+  
+  .console-underscore {
+      width: 0.3em;
+      height: 0.06em;
+  }
+  .firstLeft .firstLine {
+    font-size: 80%; /* Further reduce font size */
+}
+
+.firstLeft .secLine {
+    font-size: 120%; /* Further reduce font size */
+}
+  
+}
