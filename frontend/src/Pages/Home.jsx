@@ -4,6 +4,7 @@ import github from '../assets/github.Pro.png';
 import behance from '../assets/behance.Pro.png';
 import linkedin from '../assets/linkedin.Pro.png';
 import Logo from '../assets/Logo.png';
+import { Button, Typography, IconButton, Box } from '@mui/material';
 
 function Home() {
   useEffect(() => {
@@ -78,7 +79,26 @@ function Home() {
             <img src={linkedin} alt="LinkedIn" />
           </div>
           <div className="aboutMe">
-            <button className="aboutMebtn">About Me</button>
+          <Button
+              variant="outlined"
+              sx={{
+                width: 220,
+                height: 70,
+                backgroundColor: '#1E242B',
+                borderRadius: '50px',
+                borderColor: '#2AD87F',
+                borderWidth:'4px' ,
+                fontSize: 30,
+                fontWeight:600,
+                color: '#2AD87F',
+                '&:hover': {
+                  borderColor: '#2AD87F',
+                  backgroundColor: 'rgba(42, 216, 127)', // Slight background color on hover
+                  color: '#1E242B',
+                  borderWidth:'4px' 
+                },
+              }}
+            >About Me</Button>
           </div>
         </div>
         <div className="firstRight">

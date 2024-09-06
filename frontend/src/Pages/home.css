@@ -6,23 +6,27 @@ body{
     display: flex;
     flex-direction: row;
     align-items: center;
+    flex: 2;
 }
 .firstLeft{
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 30%;
+    flex: 1;
 
     .firstLine{
         color: #2AD87F;
-        font-size: 50px;
+        font-size: 200%;
         font-weight: 600;
-        margin: auto;
+        margin: auto 0;
+        
     }
     .secLine{
         color: #1E242B;
-        font-size: 85px;
-        margin: auto;
+        font-size: 350%;
         text-transform: uppercase;
+        margin: auto 0;
     }
 }
 .hidden {
@@ -30,11 +34,10 @@ body{
   }
   
   .console-container {
-    font-size: 4em; /* Adjust as needed for your design */
+    font-size: 3.5em; /* Adjust as needed for your design */
     font-weight: 700;
     text-align: center;
     display: block;
-    margin: auto;
     width: 600px; /* Adjust based on your needs */
   }
   
@@ -43,13 +46,93 @@ body{
     position: relative;
     top: -0.14em;
     left: 10px;
+    color: #2AD87F;
+    font-weight: 800;
   }
   
-  .socialMedia{
+.socialMedia{
     display: flex;
     flex-direction: row;
     gap: 30px; 
-  }
-  .socialMedia img{
+    margin-top: 20px;
+}
+.socialMedia img{
         width: 50px;
+}
+.aboutMe{
+    margin-top: 30px;
+}
+
+.firstRight{
+  margin: 0;
+  flex: 1;
+}
+.firstRight img{
+    width: 50%;
+}
+
+@media screen and (max-width: 768px) {
+    .firstScreen {
+      flex-direction: column; /* Stack content vertically */
+      align-items: center;
+      text-align: center;
     }
+  
+    .firstLine {
+      font-size: 2em; /* Adjust font size for tablets */
+    }
+  
+    .secLine {
+      font-size: 50px; /* Adjust font size for tablets */
+    }
+  
+    .console-container {
+      font-size: 2.5em; /* Smaller font for console text */
+      width: 80%; /* Adjust width */
+    }
+  
+    .socialMedia img {
+      width: 40px; /* Adjust icon size */
+    }
+  
+    .firstRight {
+      margin-left: 0;
+      margin-top: 20px;
+    }
+  
+    .firstRight img {
+      width: 70%; /* Make image slightly smaller */
+    }
+  }
+  
+  /* Mobile Styles */
+  @media screen and (max-width: 480px) {
+    .firstLine {
+      font-size: 100%; /* Smaller font for mobile */
+    }
+  
+    .secLine {
+      font-size: 200% /* Smaller font for mobile */
+    }
+  
+    .console-container {
+      font-size: 2em; /* Smaller font for mobile */
+      width: 90%; /* Full width for mobile */
+    }
+  
+    .socialMedia {
+      gap: 20px; /* Reduce gap between icons */
+    }
+  
+    .socialMedia img {
+      width: 30px; /* Smaller icons */
+    }
+  
+    .aboutMe {
+      margin-top: 20px; /* Adjust spacing */
+    }
+  
+    .firstRight img {
+      width: 80%; /* Make image smaller */
+    }
+  }
