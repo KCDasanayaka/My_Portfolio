@@ -1,12 +1,17 @@
-import React, { useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
+
 import './home.css';
 import github from '../assets/github.Pro.png';
 import behance from '../assets/behance.Pro.png';
 import linkedin from '../assets/linkedin.Pro.png';
 import Logo from '../assets/Logo.png';
 import { Button, Typography, IconButton, Box } from '@mui/material';
+import { Toggle } from "./Components/DarkMood/Components/Toggle";
 
 function Home() {
+
+  
+
   useEffect(() => {
     consoleText(['UI UX Engineer', 'Full-Stack Dev', 'Undergraduate'], 'text', ['#2AD87F']);
   }, []);
@@ -57,10 +62,14 @@ function Home() {
         visible = true;
       }
     }, 400);
-  }
-
+    return () => {
+      clearInterval(textInterval);
+      clearInterval(underscoreInterval);
+    };
+  };
   return (
-    <div className="home">
+    <div className="homeFirst" >
+      <div className="home">
       <div className="firstScreen">
         <div className="firstLeft">
           <p className="firstLine">Hello Everyone</p>
@@ -111,6 +120,8 @@ function Home() {
         </div>
       </div>
     </div>
+    </div>
+    
   );
 }
 

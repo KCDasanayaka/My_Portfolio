@@ -1,0 +1,15 @@
+.toggle-container {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+.toggle-checkbox {
+  display: none;
+}
+
+.toggle-label {
+  cursor: pointer;
+  font-size: 3rem;
+  user-select: none;
+}

@@ -1,15 +1,11 @@
-body{
-    background-color: white;
-
-}
 
 .firstScreen{
     display: flex;
     flex-direction: row;
     align-items: center;
     flex: 2;
-    padding: 0 5%;
-    margin-top: 10%;
+    padding: 0 10%;
+    margin-top: 5%;
 }
 .firstLeft {
   display: flex;
@@ -30,7 +26,7 @@ body{
 }
 
 .firstLeft .secLine {
-  color: #1E242B;
+  color: var(--text-color);
   font-size: 320%; /* Default size */
   text-transform: uppercase;
   margin: auto 0;
@@ -44,6 +40,7 @@ body{
     font-size: 280%;
     font-weight: 700;
     text-align: center;
+    font-family:'Courier New', Courier, monospace;
     display: block;
   }
   
@@ -75,7 +72,7 @@ body{
   width: 40%;
 }
 .firstRight img {
-  width: 70%; /* Adjust this as needed */
+  width: 60%; /* Adjust this as needed */
   min-width: 40%;
   height: auto;
 }
@@ -121,7 +118,7 @@ body{
 
 
   .firstRight img {
-      width: 80%; /* Scale image width more moderately */
+      width: 90%; /* Scale image width more moderately */
   }
 }
 
@@ -138,7 +135,8 @@ body{
   }
 
   .firstLeft .firstLine {
-      font-size: 150%; /* Adjust font size for tablets */
+    margin-top: 10%;
+      font-size: 120%; /* Adjust font size for tablets */
   }
 
   .firstLeft .secLine {
@@ -177,7 +175,8 @@ body{
   }
 
   .firstLeft .firstLine {
-      font-size: 100%; /* Smaller font for mobile */
+    margin-top: 15%;
+      font-size: 80%; /* Smaller font for mobile */
   }
 
   .firstLeft .secLine {
@@ -185,7 +184,8 @@ body{
   }
   
     .console-container {
-      font-size: 80%; /* Smaller font for mobile */
+      width: 150%;
+      font-size: 120%; /* Smaller font for mobile */
     }
   
     .socialMedia {
