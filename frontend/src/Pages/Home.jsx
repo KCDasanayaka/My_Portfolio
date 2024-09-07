@@ -82,23 +82,28 @@ function Home() {
           <Button
               variant="outlined"
               sx={{
-                width: 220,
-                height: 70,
+                width: { xs: '100%', sm: 'auto' }, // Full width on small screens, fixed width on larger screens
+                height: { xs: '40px', sm: '60px' }, // Slightly smaller height on small screens
                 backgroundColor: '#1E242B',
                 borderRadius: '50px',
                 borderColor: '#2AD87F',
-                borderWidth:'4px' ,
-                fontSize: 30,
-                fontWeight:600,
+                borderWidth: '2.5px',
+                fontSize: { xs: '12px', sm: '18px', md: '20px', lg: '22px' }, // Responsive font sizes
+                fontWeight: 600,
                 color: '#2AD87F',
+                padding: { xs: '10px 20px', sm: '5px 30px', md: '12px 40px' }, // Responsive padding
+                
                 '&:hover': {
-                  borderColor: '#2AD87F',
-                  backgroundColor: 'rgba(42, 216, 127)', // Slight background color on hover
+                  borderColor: '#1E242B',
+                  backgroundColor: '#2AD87F', // Adjusted hover effect
                   color: '#1E242B',
-                  borderWidth:'4px' 
+                  borderWidth: '4.5px',
                 },
               }}
-            >About Me</Button>
+            >
+              About Me
+          </Button>
+
           </div>
         </div>
         <div className="firstRight">

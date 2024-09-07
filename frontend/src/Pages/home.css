@@ -8,12 +8,15 @@ body{
     flex-direction: row;
     align-items: center;
     flex: 2;
+    padding: 0 5%;
 }
 .firstLeft {
   display: flex;
   flex-direction: column;
   align-items: center;
   flex: 1;
+  width: 40%;
+  padding: 0 5%;
 }
 
 .firstLeft .firstLine {
@@ -21,11 +24,12 @@ body{
   font-size: 200%; /* Default size */
   font-weight: 600;
   margin: auto 0;
+  
 }
 
 .firstLeft .secLine {
   color: #1E242B;
-  font-size: 350%; /* Default size */
+  font-size: 300%; /* Default size */
   text-transform: uppercase;
   margin: auto 0;
 }
@@ -68,10 +72,47 @@ body{
 .firstRight{
   margin: 0;
   flex: 1;
+  width: 40%;
 }
-.firstRight img{
-    min-width: 40%;
-    max-width: 50%;
+.firstRight img {
+  width: 70%; /* Adjust this as needed */
+  min-width: 40%;
+  height: auto;
+}
+
+@keyframes imageEntrance {
+  0% {
+    opacity: 0;
+    transform: scale(0.8) rotate(-10deg);
+  }
+  50% {
+    opacity: 0.5;
+    transform: scale(1.05) rotate(5deg);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) rotate(0deg);
+  }
+}
+
+.firstRight img {
+  animation: imageEntrance 1.5s ease-in-out forwards;
+}
+
+/* Tablet Styles */
+@media screen and (max-width: 1024px) {
+  .firstScreen{
+    padding: 0 2.5%;
+  }
+  .firstLeft {
+      width: 40%;
+  }
+
+
+
+  .firstRight img {
+      width: 80%; /* Scale image width more moderately */
+  }
 }
 
 @media screen and (max-width: 768px) {
@@ -83,7 +124,7 @@ body{
     }
   
     .firstLeft {
-       /* Adjust alignment if needed */
+      width: 40%;
   }
 
   .firstLeft .firstLine {
@@ -109,8 +150,8 @@ body{
     }
   
     .firstRight img {
-      width: 70%; /* Make image slightly smaller */
-    }
+      width: 90%; /* Reduce image width more conservatively */
+  }
   }
   
   /* Mobile Styles */
