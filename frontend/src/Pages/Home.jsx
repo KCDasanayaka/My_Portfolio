@@ -8,7 +8,7 @@ import { Button, Typography, IconButton, Box } from '@mui/material';
 
 function Home() {
   useEffect(() => {
-    consoleText(['UI UX Engineer', 'Full-Stack Dev'], 'text', ['#2AD87F']);
+    consoleText(['UI UX Engineer', 'Full-Stack Dev', 'Undergraduate'], 'text', ['#2AD87F']);
   }, []);
 
   function consoleText(words, id, colors) {
@@ -82,7 +82,7 @@ function Home() {
           <Button
               variant="outlined"
               sx={{
-                width: { xs: '100%', sm: 'auto' }, // Full width on small screens, fixed width on larger screens
+                width: { xs: '120%', sm: 'auto' }, // Full width on small screens, fixed width on larger screens
                 height: { xs: '40px', sm: '60px' }, // Slightly smaller height on small screens
                 backgroundColor: '#1E242B',
                 borderRadius: '50px',
