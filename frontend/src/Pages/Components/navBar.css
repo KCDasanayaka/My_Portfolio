@@ -1,0 +1,21 @@
+.navBar{
+    margin-top: -5%;
+    margin-left: 5%;
+}
+.navLeft{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 20%;
+    gap: 5%;
+}
+.navImage{
+    width: 60px;
+    height: 60px;
+}
+.navHead{
+    font-size: 2rem;
+    margin: 0;
+    color: white;
+    font-weight: 650;
+}            
