@@ -6,10 +6,9 @@ import behance from '../assets/behance.Pro.png';
 import linkedin from '../assets/linkedin.Pro.png';
 import Logo from '../assets/Logo.png';
 import { Button } from '@mui/material';
-import { Toggle } from "./Components/DarkMood/Components/Toggle";
 
 function Home() {
-  const [isDark, setIsDark] = useState(false); // Set initial theme as light
+  
 
   useEffect(() => {
     consoleText(['UI UX Engineer', 'Full-Stack Dev', 'Undergraduate'], 'text', ['#2AD87F']);
@@ -69,7 +68,7 @@ function Home() {
   };
 
   return (
-    <div className={`homeFirst ${isDark ? 'dark' : 'light'}`}>
+    <div className={`homeFirst`}>
       <NavBar />
       <div className="home">
         
@@ -121,10 +120,7 @@ function Home() {
           </div>
         </div>
       </div>
-      <Toggle
-        isChecked={isDark}
-        handleChange={() => setIsDark(!isDark)} // Toggle handler
-      />
+      
     </div>
   );
 }

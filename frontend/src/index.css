@@ -5,14 +5,16 @@
 }
 
 [data-theme="dark"] {
-  --background-color: #121212;
+  --background-color: #1E242B;
   --text-color: #2AD87F;
+  --nav-color:white;
   --btncolor:
   --primary-color: #bb86fc;
 }
 
 [data-theme="light"] {
   --background-color: #ffffff;
+  --nav-color:#1E242B;
   --text-color: #1E242B;
   --primary-color: #6200ee;
 }

@@ -1,15 +1,52 @@
 .toggle-container {
+  display: flex;
+  flex-direction: column; /* Stack items vertically */
+  align-items: center;   
   position: absolute;
-  top: 20px;
-  right: 20px;
+  top: 1em;
+  right: 2em;
+  /* Add media query for responsiveness */
 }
 
 .toggle-checkbox {
-  display: none;
+  display: none; /* Hide the default checkbox */
 }
 
 .toggle-label {
-  cursor: pointer;
-  font-size: 3rem;
-  user-select: none;
+  border-radius: 20px;    /* Rounded corners */
+  padding: 10px 20px;     /* Space around the text */
+  cursor: pointer;        /* Pointer cursor on hover */
+  font-size: 28px;        /* Larger font size for visibility */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;    /* Space between the label and checkbox */
+  user-select: none;      /* Prevent text selection */
+  transition: background-color 0.3s; /* Smooth background color transition */
+}
+
+/* Adjust padding and font size for smaller screens */
+@media (max-width: 600px) {
+  .toggle-container{
+    right: 1.5em;
+  }
+  .toggle-label {
+    padding: 8px 16px;
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 400px) {
+  .toggle-container{
+    right: 1em;
+  }
+  .toggle-label {
+    padding: 6px 12px;
+    font-size: 20px;
+  }
+}
+
+/* Background color when checked */
+.toggle-checkbox:checked + .toggle-label {
+  background-color: #4caf50; /* Background color when checked */
 }

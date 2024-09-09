@@ -1,21 +1,96 @@
-.navBar{
+/* Base styles */
+.navBar {
     margin-top: -5%;
     margin-left: 5%;
+    top: 1em;
 }
-.navLeft{
+
+.navLeft {
     display: flex;
     flex-direction: row;
     align-items: center;
     width: 20%;
     gap: 5%;
 }
-.navImage{
+
+.navImage {
     width: 60px;
     height: 60px;
 }
-.navHead{
+
+.navHead {
     font-size: 2rem;
     margin: 0;
-    color: white;
+    color: var(--nav-color);
     font-weight: 650;
-}            
+}
+
+/* Responsive styles */
+@media (max-width: 1200px) {
+    .navLeft {
+        width: 25%; /* Adjust width for medium to large tablets and small desktops */
+        gap: 4%;
+    }
+
+    .navHead {
+        font-size: 1.8rem; /* Slightly smaller font size */
+    }
+}
+
+@media (max-width: 992px) {
+    .navLeft {
+        width: 30%; /* Increase width for tablets */
+        gap: 3%;
+    }
+
+    .navImage {
+        width: 50px; /* Slightly smaller images for tablets */
+        height: 50px;
+    }
+
+    .navHead {
+        font-size: 1.6rem; /* Smaller font size for tablets */
+    }
+}
+
+@media (max-width: 768px) {
+    .navBar {
+        margin-top: -3%; /* Reduce margin for smaller screens */
+        margin-left: 2%; /* Adjust margin */
+    }
+
+    .navLeft {
+        width: 35%; /* Increase width for mobile devices */
+        gap: 2%;
+    }
+
+    .navImage {
+        width: 40px; /* Smaller images for mobile devices */
+        height: 40px;
+    }
+
+    .navHead {
+        font-size: 1.4rem; /* Smaller font size for mobile devices */
+    }
+}
+
+@media (max-width: 480px) {
+    .navBar {
+        margin-top: -1%; /* Further reduce margin */
+        margin-left: 1%; /* Further adjust margin */
+    }
+
+    .navLeft {
+        width: 50%; /* Increase width to fit content on very small screens */
+        gap: 1%;
+    }
+
+    .navImage {
+        width: 35px; /* Even smaller images for very small screens */
+        height: 35px;
+    }
+
+    .navHead {
+        font-size: 1.2rem; /* Smaller font size for very small screens */
+    }
+}

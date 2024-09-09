@@ -4,6 +4,9 @@ import "./toggle.css";
 export const Toggle = ({ isChecked, handleChange }) => {
   return (
     <div className="toggle-container">
+      <label htmlFor="check" className="toggle-label">
+        <span>{isChecked ? '🌒' : '☀️'}</span>
+      </label>
       <input
         type="checkbox"
         id="check"
@@ -11,9 +14,6 @@ export const Toggle = ({ isChecked, handleChange }) => {
         onChange={handleChange}
         checked={isChecked}
       />
-      <label htmlFor="check" className="toggle-label">
-        <span>{isChecked ? '🌒' : '☀️'}</span>
-      </label>
     </div>
   );
 };

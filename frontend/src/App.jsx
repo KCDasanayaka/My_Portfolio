@@ -1,30 +1,34 @@
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import React, { useState } from 'react';
 import Home from './Pages/Home';
+import NavBar from './Pages/Components/NavBar';
 import { Toggle } from './Pages/Components/DarkMood/Components/Toggle';
-
 import './App.css';
 
 function App() {
-  const [isDark, setIsDark] = useState(true);
+  const [isDarkMode, setIsDarkMode] = useState(false);
 
-  const handleToggle = () => {
-    setIsDark(!isDark);
+  const toggleTheme = () => {
+    setIsDarkMode(!isDarkMode);
   };
 
   return (
-    <div className="App" data-theme={isDark ? "dark" : "light"}>
+    <div className="App" data-theme={isDarkMode ? "dark" : "light"}>
       <Router>
         <Routes>
-          <Route path="/" element={
-            <>
-              <Toggle
-                isChecked={isDark}
-                handleChange={handleToggle}
-              />
-              <Home />
-            </>
-          } />
+          <Route 
+            path="/" 
+            element={
+              <>
+                <div className={isDarkMode ? 'dark-mode' : 'light-mode'}>
+                  <Toggle isChecked={isDarkMode} handleChange={toggleTheme} />
+                  <NavBar/>
+                </div>
+                
+                <Home />
+              </>
+            } 
+          />
         </Routes>
       </Router>
     </div>
