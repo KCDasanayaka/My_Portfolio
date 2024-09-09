@@ -22,7 +22,7 @@ function App() {
               <>
                 <div className={isDarkMode ? 'dark-mode' : 'light-mode'}>
                   <Toggle isChecked={isDarkMode} handleChange={toggleTheme} />
-                  <NavBar/>
+                  
                 </div>
                 
                 <Home />

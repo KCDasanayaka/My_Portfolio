@@ -5,7 +5,6 @@
     align-items: center;
     flex: 2;
     padding: 0 10%;
-    margin-top: 5%;
 }
 .firstLeft {
   display: flex;
@@ -75,6 +74,33 @@
   width: 60%; /* Adjust this as needed */
   min-width: 40%;
   height: auto;
+}
+.custom-shape-divider-bottom-1725901089 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+}
+
+.custom-shape-divider-bottom-1725901089 svg {
+  position: relative;
+  display: block;
+  width: calc(148% + 1.3px);
+  height: 144px;
+}
+
+.custom-shape-divider-bottom-1725901089 .shape-fill {
+  fill: #1E242B;
+}
+
+/** For mobile devices **/
+@media (max-width: 767px) {
+  .custom-shape-divider-bottom-1725901089 svg {
+      width: calc(157% + 1.3px);
+      height: 82px;
+  }
 }
 @keyframes frameEntrance{
   0% {

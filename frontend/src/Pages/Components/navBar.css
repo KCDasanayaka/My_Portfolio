@@ -1,8 +1,11 @@
 /* Base styles */
 .navBar {
-    margin-top: -5%;
-    margin-left: 5%;
-    top: 1em;
+    display: flex;
+  flex-direction: column; /* Stack items vertically */
+  align-items: center;   
+  position: absolute;
+  top: 2em;
+  left: 1em;
 }
 
 .navLeft {
@@ -27,70 +30,71 @@
 
 /* Responsive styles */
 @media (max-width: 1200px) {
+    
     .navLeft {
-        width: 25%; /* Adjust width for medium to large tablets and small desktops */
+        width: 25%; /* Adjust width for tablets/smaller desktops */
         gap: 4%;
     }
 
     .navHead {
-        font-size: 1.8rem; /* Slightly smaller font size */
+        font-size: 1.8rem; /* Adjust font size */
     }
 }
 
 @media (max-width: 992px) {
+   
+
     .navLeft {
-        width: 30%; /* Increase width for tablets */
+        width: 30%; /* Increase width for better fit */
         gap: 3%;
     }
 
     .navImage {
-        width: 50px; /* Slightly smaller images for tablets */
+        width: 50px;
         height: 50px;
     }
 
     .navHead {
-        font-size: 1.6rem; /* Smaller font size for tablets */
+        font-size: 1.6rem; /* Adjust font size for tablets */
     }
 }
 
 @media (max-width: 768px) {
     .navBar {
-        margin-top: -3%; /* Reduce margin for smaller screens */
-        margin-left: 2%; /* Adjust margin */
+        right: 1.5em; /* Adjust margin */
     }
 
     .navLeft {
-        width: 35%; /* Increase width for mobile devices */
+        width: 35%; /* Further increase width for mobile */
         gap: 2%;
     }
 
     .navImage {
-        width: 40px; /* Smaller images for mobile devices */
+        width: 40px;
         height: 40px;
     }
 
     .navHead {
-        font-size: 1.4rem; /* Smaller font size for mobile devices */
+        font-size: 1.4rem; /* Smaller font size for mobile */
     }
 }
 
 @media (max-width: 480px) {
     .navBar {
-        margin-top: -1%; /* Further reduce margin */
-        margin-left: 1%; /* Further adjust margin */
+        right: 1em; /* Adjust left margin for very small screens */
     }
 
     .navLeft {
-        width: 50%; /* Increase width to fit content on very small screens */
+        width: 50%; /* Max width to fit content */
         gap: 1%;
     }
 
     .navImage {
-        width: 35px; /* Even smaller images for very small screens */
+        width: 35px;
         height: 35px;
     }
 
     .navHead {
-        font-size: 1.2rem; /* Smaller font size for very small screens */
+        font-size: 1.2rem; /* Adjust font size for very small screens */
     }
 }

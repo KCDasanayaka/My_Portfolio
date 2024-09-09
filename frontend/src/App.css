@@ -33,6 +33,17 @@
   filter: drop-shadow(0 0 2em #61dafbaa);
 }
 
+.top-bar {
+  display: flex;
+  justify-content: space-between; /* Space out NavBar and Toggle */
+  align-items: center;
+  padding: 1em; /* Add padding as needed */
+}
+
+.navbar-container {
+  display: flex;
+  align-items: center;
+}
 @keyframes logo-spin {
   from {
     transform: rotate(0deg);
