@@ -13,7 +13,7 @@ import 'animate.css';
 
 // StyledButton component definition
 const StyledButton = styled(Button)(({ active }) => ({
-  width: 'auto',
+  width: '150px',
   height: '60px',
   backgroundColor: '#ffffff',
   borderRadius: '50px',
@@ -25,12 +25,43 @@ const StyledButton = styled(Button)(({ active }) => ({
   padding: '5px 30px',
   transition: 'all 0.3s ease',
   ...(active && {
-    borderColor: '#1E242B',
-    backgroundColor: '#2AD87F',
-    color: '#1E242B',
+    borderColor: '#2AD87F',
+    backgroundColor: '#1E242B',
+    color: '#2AD87F',
     borderWidth: '4.5px',
   }),
 }));
+
+const ProjectCard = ({ category }) => {
+  const [isHovered, setIsHovered] = useState(false);
+
+  return (
+    <div
+      className={`mw-box1 ${isHovered ? 'active' : ''}`}
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
+    >
+      <img src={proimage1} alt='Project' className='proImage1' />
+      <div className="mw-protop">
+        <div className="mw-fimgabox">
+          <img src={figma} alt='Figma' className='mw-figma' />
+        </div>
+        <h3>{category} Case Study</h3>
+      </div>
+      <p className='mw-detail'>Coding Enablement Platform</p>
+      <div className="hover-box">
+        <div className="hover-box-content" style={{padding:'15%'}}>
+          <h3>Buildmate+</h3>
+          <p style={{textAlign:'justify',fontSize:'13px'}}>Buildmate+ is an innovative construction enablement platform designed to streamline project management and connect clients with professionals and suppliers. </p>
+          <div className="mw-hoverbtn" style={{display:'flex',justifyContent:'flex-end', gap:'10px'}}>
+            <img src={github} alt="GitHub" style={{width:'35px'}}/>
+            <img src={behance} alt="Behance" style={{width:'35px'}}/>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
 
 const Home = () => {
   const [activeButton, setActiveButton] = useState('UI'); // Set default active button
@@ -99,7 +130,7 @@ const Home = () => {
   }
 
   return (
-    <div className={`homeFirst`}>
+    <div className="homeFirst">
       <NavBar />
       <div className="home">
         <section className='section1'>
@@ -186,54 +217,24 @@ const Home = () => {
             <div className="mw-projects">
               {activeCategory === 'UI' && (
                 <div className="mw-projectcard">
-                  {/* Add your project cards for UI here */}
                   {[...Array(3)].map((_, i) => (
-                    <div className="mw-box1" key={i}>
-                      <img src={proimage1} alt='Project' className='proImage1' />
-                      <div className="mw-protop">
-                        <div className="mw-fimgabox">
-                          <img src={figma} alt='Figma' className='mw-figma' />
-                        </div>
-                        <h3>UI Case Study</h3>
-                      </div>
-                      <p className='mw-detail'>Construction Enablement web Platform</p>
-                    </div>
+                    <ProjectCard key={i} category='UI' />
                   ))}
                 </div>
               )}
 
               {activeCategory === 'Coding' && (
                 <div className="mw-projectcard">
-                  {/* Add your project cards for Coding here */}
                   {[...Array(3)].map((_, i) => (
-                    <div className="mw-box1" key={i}>
-                      <img src={proimage1} alt='Project' className='proImage1' />
-                      <div className="mw-protop">
-                        <div className="mw-fimgabox">
-                          <img src={figma} alt='Figma' className='mw-figma' />
-                        </div>
-                        <h3>Coding Case Study</h3>
-                      </div>
-                      <p className='mw-detail'>Coding Enablement Platform</p>
-                    </div>
+                    <ProjectCard key={i} category='Coding' />
                   ))}
                 </div>
               )}
 
               {activeCategory === 'Designing' && (
                 <div className="mw-projectcard">
-                  {/* Add your project cards for Designing here */}
                   {[...Array(3)].map((_, i) => (
-                    <div className="mw-box1" key={i}>
-                      <img src={proimage1} alt='Project' className='proImage1' />
-                      <div className="mw-protop">
-                        <div className="mw-fimgabox">
-                          <img src={figma} alt='Figma' className='mw-figma' />
-                        </div>
-                        <h3>Designing Case Study</h3>
-                      </div>
-                      <p className='mw-detail'>Designing Enablement Platform</p>
-                    </div>
+                    <ProjectCard key={i} category='Designing' />
                   ))}
                 </div>
               )}
