@@ -61,7 +61,7 @@
 
 @media (max-width: 768px) {
     .navBar {
-        right: 1.5em; /* Adjust margin */
+        left: 1em; /* Adjust margin */
     }
 
     .navLeft {
@@ -81,7 +81,7 @@
 
 @media (max-width: 480px) {
     .navBar {
-        right: 1em; /* Adjust left margin for very small screens */
+        left: 1em; /* Adjust left margin for very small screens */
     }
 
     .navLeft {
