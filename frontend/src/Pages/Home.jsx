@@ -5,6 +5,7 @@ import github from '../assets/github.Pro.png';
 import behance from '../assets/behance.Pro.png';
 import linkedin from '../assets/linkedin.Pro.png';
 import proimage1 from '../assets/Artboard 1.png';
+import cvimg from '../assets/CVProfilePic.2.png';
 import Logo from '../assets/Logo.png';
 import figma from '../assets/tool.png';
 import { Button } from '@mui/material';
@@ -253,6 +254,13 @@ const Home = () => {
                   ))}
                 </div>
               )}
+            </div>
+          </div>
+        </section>
+        <section className='section3'>
+          <div className="about">
+            <div className="aboutleft">
+              <img src={cvimg} alt=' '/>
             </div>
           </div>
         </section>
