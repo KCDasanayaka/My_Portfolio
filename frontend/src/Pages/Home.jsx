@@ -12,24 +12,39 @@ import { styled } from '@mui/material/styles';
 import 'animate.css';
 
 // StyledButton component definition
+
 const StyledButton = styled(Button)(({ active }) => ({
-  width: '150px',
-  height: '60px',
+  width: '80%', // Use percentage for responsiveness
+  maxWidth: '200px', // Limit maximum width
+  height: 'auto', // Adjust height automatically based on content
+  padding: '0.5em 1em', // Use em units for padding
   backgroundColor: '#ffffff',
   borderRadius: '50px',
   borderColor: '#000000',
   borderWidth: '2.5px',
-  fontSize: '18px',
+  fontSize: '1.2rem', // Use relative units for font size
   fontWeight: 600,
   color: '#000000',
-  padding: '5px 30px',
   transition: 'all 0.3s ease',
   ...(active && {
     borderColor: '#2AD87F',
     backgroundColor: '#1E242B',
     color: '#2AD87F',
-    borderWidth: '4.5px',
+    borderWidth: '4px', // Fixed value is fine for borderWidth
   }),
+
+  // Responsive design adjustments
+  '@media (max-width: 600px)': { // Mobile devices
+    width: '100%', // Full width on small screens
+    padding: '0.75em 1.5em', // Adjust padding
+    fontSize: '0.875rem', // Adjust font size
+  },
+
+  '@media (min-width: 600px) and (max-width: 960px)': { // Tablet screens
+    width: '90%', // Adjust width for medium screens
+    padding: '0.75em 1.25em',
+    fontSize: '1rem',
+  },
 }));
 
 const ProjectCard = ({ category }) => {
@@ -42,11 +57,11 @@ const ProjectCard = ({ category }) => {
       onMouseLeave={() => setIsHovered(false)}
     >
       <img src={proimage1} alt='Project' className='proImage1' />
-      <div className="mw-protop">
+      <div className="mw-protop" style={{margin:'5% 0 0 0'}}>
         <div className="mw-fimgabox">
           <img src={figma} alt='Figma' className='mw-figma' />
         </div>
-        <h3>{category} Case Study</h3>
+        <h3 style={{margin:'auto'}}>{category} Case Study</h3>
       </div>
       <p className='mw-detail'>Coding Enablement Platform</p>
       <div className="hover-box">
@@ -169,7 +184,7 @@ const Home = () => {
                       borderColor: '#1E242B',
                       backgroundColor: '#2AD87F',
                       color: '#1E242B',
-                      borderWidth: '4.5px',
+                      borderWidth: '4 px',
                     },
                   }}
                 >
