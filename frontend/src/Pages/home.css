@@ -283,6 +283,19 @@ section {
   z-index: 10;
 }
 
+.mw-box1.active .hover-box {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.hover-box-content {
+  text-align: center;
+}
+
+.hover-box-content h3 {
+  margin: 0;
+  font-size: 1.5rem;
+}
 
 @keyframes frameEntrance {
   0% {
