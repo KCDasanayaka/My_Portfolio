@@ -39,12 +39,14 @@ const StyledButton = styled(Button)(({ active }) => ({
     width: '100%', // Full width on small screens
     padding: '0.75em 1.5em', // Adjust padding
     fontSize: '0.875rem', // Adjust font size
+    borderRadius: '30px',
   },
 
   '@media (min-width: 600px) and (max-width: 960px)': { // Tablet screens
     width: '90%', // Adjust width for medium screens
-    padding: '0.75em 1.25em',
+    padding: '0.5em 1em',
     fontSize: '1rem',
+    borderRadius: '10px',
   },
 }));
 
@@ -260,6 +262,7 @@ const Home = () => {
         <section className='section3'>
           <div className="about">
             <div className="aboutleft">
+              <img src={cvimg} alt=' ' />
             </div>
           </div>
         </section>

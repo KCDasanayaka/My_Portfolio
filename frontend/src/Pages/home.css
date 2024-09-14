@@ -10,7 +10,10 @@ html {
   display: flex;
   flex-direction: column;
 }
+.home{
+  margin-top: 60%;
 
+}
 section {
   display: block;
   width: 100%;
@@ -18,7 +21,9 @@ section {
 
 
 .section1 {
+  margin-top: 5%;
   display: flex;
+  position: relative;
   justify-content: space-between;
   align-items: center;
   width: 100%;
@@ -30,10 +35,15 @@ section {
   width: 100%;
   background-color: var(--text-color);
   text-align: center;
+  height: max-content;
+}
+.section3{
+  width: 100%;
+  background-color: var(--text-color);
+  text-align: center;
   position: absolute;
   height: max-content;
 }
-
 .section3{
   height: max-content;
   width: 100%;
@@ -422,6 +432,10 @@ section {
 
 /* Mobile */
 @media screen and (max-width: 480px) {
+  .section1{
+    margin-top: 100%;
+  
+  }
   .firstScreen {
     flex-direction: column-reverse;
   }

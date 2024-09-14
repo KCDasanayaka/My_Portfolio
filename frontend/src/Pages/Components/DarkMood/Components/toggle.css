@@ -13,6 +13,7 @@
 }
 
 .toggle-label {
+  z-index: 100;
   border-radius: 20px;    /* Rounded corners */
   padding: 10px 20px;     /* Space around the text */
   cursor: pointer;        /* Pointer cursor on hover */
