@@ -13,8 +13,7 @@ html {
 
 .section1, .section2, .section3 {
   display: block;
-  width: 100%;
-  padding: 20px 0; /* Add space between sections */
+  width: 100%; /* Add space between sections */
 }
 
 .homeFirst {
@@ -37,7 +36,6 @@ html {
   display: block;
   width: 100%;
   margin: 0;
-  padding: 50px 0;
   min-height: 50vh;
 }
 
@@ -66,7 +64,8 @@ html {
   flex-direction: row;
   align-items: center;
   padding: 5%;
-  margin-bottom: 5%;
+  margin-top: 5%;
+  margin-bottom: 10%;
   flex: 2;
 }
 
@@ -329,13 +328,14 @@ html {
 }
 .aboutright{
   flex: 1;
+  padding: 0 5%;
 }
 .aboutleft{
   flex: 1;
 }
 .custom-shape-divider-top-1726385316 {
   position: relative;
-  top: 0;
+  top: -1px;
   left: 0;
   width: 100%;
   overflow: hidden;
@@ -351,7 +351,7 @@ html {
 }
 
 .custom-shape-divider-top-1726385316 .shape-fill {
-  fill: #FFFFFF;
+  fill: var(--text-color);
 }
 .ab-subhead{
   text-align: justify;
@@ -470,6 +470,7 @@ html {
     flex-direction: column-reverse;
     align-items: center;
     text-align: center;
+    margin-bottom: 25%;
   }
 
   .firstLeft {
@@ -502,9 +503,7 @@ html {
     width: 90%;
     min-width: 60%;
   }
-  .mw-subhead, .ab-head {
-    font-size: 1rem;
-  }
+  
   .ab-subhead{
     font-size: 1rem;
   }
