@@ -10,15 +10,11 @@ html {
   display: flex;
   flex-direction: column;
 }
-.home{
 
-}
-section {
-}
 .section1, .section2, .section3 {
   display: block;
   width: 100%;
-  padding: 50px 0; /* Add space between sections */
+  padding: 20px 0; /* Add space between sections */
 }
 
 .homeFirst {
@@ -62,7 +58,6 @@ section {
 }
 .section3{
   width: 100%;
-  background-color: var(--text-color);
   text-align: center;
   height: max-content;
 }
@@ -322,6 +317,69 @@ section {
   font-size: 1.5rem;
 }
 
+.about{
+  margin-top: 5%;
+  padding:0 5% ;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  flex: 2;
+  gap: 5%;
+}
+.aboutright{
+  flex: 1;
+}
+.aboutleft{
+  flex: 1;
+}
+.custom-shape-divider-top-1726385316 {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  transform: rotate(180deg);
+}
+
+.custom-shape-divider-top-1726385316 svg {
+  position: relative;
+  display: block;
+  width: calc(151% + 1.3px);
+  height: 109px;
+}
+
+.custom-shape-divider-top-1726385316 .shape-fill {
+  fill: #FFFFFF;
+}
+.ab-subhead{
+  text-align: justify;
+  font-size: 1.4rem;
+  color:var(--text-color);
+  margin-top: auto;
+  margin-bottom: 40px;
+}
+.ab-head{
+  font-size: 4.5rem;
+  margin-bottom: 10px;
+  color: var(--text-color);
+}
+/** For tablet devices **/
+@media (min-width: 768px) and (max-width: 1023px) {
+  .custom-shape-divider-top-1726385316 svg {
+      width: calc(151% + 1.3px);
+      height: 75px;
+  }
+}
+
+/** For mobile devices **/
+@media (max-width: 767px) {
+  .custom-shape-divider-top-1726385316 svg {
+      width: calc(151% + 1.3px);
+      height: 42px;
+  }
+}
 @keyframes frameEntrance {
   0% {
     opacity: 0;
@@ -364,10 +422,7 @@ section {
 
 /* Medium Screens */
 @media screen and (max-width: 1300px) {
-  .mw-projectcard {
-    flex-direction: column;
-  }
-
+ 
   .mw-btngroup {
     gap: 100px;
   }
@@ -398,10 +453,19 @@ section {
   .firstRight img {
     width: 90%;
   }
+  .ab-subhead{
+    font-size: 1.2rem;
+  }
 }
 
 /* Tablets */
 @media screen and (max-width: 768px) {
+  .mw-projectcard {
+    flex-direction: column;
+  }
+  .about{
+    flex-direction: column;
+  }
   .firstScreen {
     flex-direction: column-reverse;
     align-items: center;
@@ -437,6 +501,12 @@ section {
   .firstRight img {
     width: 90%;
     min-width: 60%;
+  }
+  .mw-subhead, .ab-head {
+    font-size: 1rem;
+  }
+  .ab-subhead{
+    font-size: 1rem;
   }
 }
 
@@ -483,7 +553,7 @@ section {
     min-width: 50%;
   }
 
-  .mw-head {
+  .mw-head, .ab-head {
     font-size: 2rem;
   }
 

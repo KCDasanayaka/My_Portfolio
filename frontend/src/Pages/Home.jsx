@@ -46,7 +46,7 @@ const StyledButton = styled(Button)(({ active }) => ({
     width: '90%', // Adjust width for medium screens
     padding: '0.5em 1em',
     fontSize: '1rem',
-    borderRadius: '10px',
+    borderRadius: '20px',
   },
 }));
 
@@ -174,7 +174,7 @@ const Home = () => {
                   variant="outlined"
                   sx={{
                     width: { xs: '120%', sm: 'auto' },
-                    height: { xs: '40px', sm: '60px' },
+                    height: { xs: '40px', sm: '40px', md:'60px' },
                     backgroundColor: '#1E242B',
                     borderRadius: '50px',
                     borderColor: '#2AD87F',
@@ -182,12 +182,29 @@ const Home = () => {
                     fontSize: { xs: '12px', sm: '18px', md: '20px', lg: '22px' },
                     fontWeight: 600,
                     color: '#2AD87F',
-                    padding: { xs: '10px 20px', sm: '5px 30px', md: '12px 40px' },
+                    marginBottom:'5%',
+                    padding: { xs: '10px 20px', sm: '5px 30px', md: '10px 40px' },
                     '&:hover': {
                       borderColor: '#1E242B',
                       backgroundColor: '#2AD87F',
                       color: '#1E242B',
                       borderWidth: '4 px',
+                    },
+                    '@media (max-width: 600px)': { // Mobile devices
+                      width: '100%', // Full width on small screens
+                      padding: '0.75em 1.5em', // Adjust padding
+                      fontSize: '0.875rem', // Adjust font size
+                      borderRadius: '30px',
+                      marginTop:'-5%',
+                      
+                    },
+
+                    '@media (min-width: 600px) and (max-width: 960px)': { // Tablet screens
+                      width: '100%', // Adjust width for medium screens
+                      padding: '0.75em 1.5em', // Adjust padding
+                      fontSize: '1rem',
+                      borderRadius: '30px',
+                      marginTop:'-5%',
                     },
                   }}
                 >
@@ -260,9 +277,59 @@ const Home = () => {
           </div>
         </section>
         <section className='section3'>
+          <div class="custom-shape-divider-top-1726385316">
+              <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                  <path d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z" class="shape-fill"></path>
+              </svg>
+          </div>
           <div className="about">
             <div className="aboutleft">
-              <img src={cvimg} alt=' ' />
+              <img src={cvimg} alt=' ' width={'80%'}/>
+            </div>
+            <div className="aboutright">
+              <div className="abouthead">
+                <h1 className='ab-head'>About Me</h1>
+                <p className='ab-subhead'>Hello! I'm Kavindu Chathuranga, a third-year Computing and Information Systems student at Sabaragamuwa University. Passionate about full-stack development and UI/UX engineering, I strive to create impactful and intuitive digital experiences. Eager to bring my skills to the tech industry, I thrive on innovation and collaboration.</p>
+                <Button
+                  variant="outlined"
+                  sx={{
+                    width: { xs: 'auto', sm: 'auto' },
+                    height: { xs: '40px', sm: '40px', md:'60px' },
+                    backgroundColor: '#1E242B',
+                    borderRadius: '50px',
+                    borderColor: '#2AD87F',
+                    borderWidth: '2.5px',
+                    fontSize: { xs: '12px', sm: '18px', md: '20px', lg: '22px' },
+                    fontWeight: 600,
+                    color: '#2AD87F',
+                    marginBottom:'5%',
+                    padding: { xs: '10px 20px', sm: '5px 30px', md: '10px 40px' },
+                    '&:hover': {
+                      borderColor: '#1E242B',
+                      backgroundColor: '#2AD87F',
+                      color: '#1E242B',
+                      borderWidth: '4 px',
+                    },
+                    '@media (max-width: 600px)': { // Mobile devices
+                      padding: '0.75em 1.5em', // Adjust padding
+                      fontSize: '0.875rem', // Adjust font size
+                      borderRadius: '30px',
+                      marginTop:'-5%',
+                      
+                    },
+
+                    '@media (min-width: 600px) and (max-width: 960px)': { // Tablet screens
+                      padding: '0.75em 1.5em', // Adjust padding
+                      fontSize: '1rem',
+                      borderRadius: '30px',
+                      marginTop:'-5%',
+                    },
+                  }}
+                >
+                  Download my cV
+                </Button>
+              
+              </div>
             </div>
           </div>
         </section>
