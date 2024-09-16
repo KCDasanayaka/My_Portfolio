@@ -37,7 +37,24 @@ function ResponsiveAppBar({ isDarkMode, toggleTheme }) {
   };
 
   return (
-    <AppBar position="static">
+    <AppBar 
+      position="static"
+      sx={{ 
+        backgroundColor: isDarkMode ? '#333' : '#1976d2',  // Dynamic background color
+        opacity: 0.5,  // Set initial opacity
+        borderRadius: '0 0 10px 10px',  // Set initial border-radius
+        boxShadow: 'none',  // Optional: remove shadow
+        transition: '0.3s',  // Smooth transition for hover effects
+        '&:hover': {
+          backgroundColor: isDarkMode ? '#444' : '#005bb5',  // Darker background on hover, adjust dynamically
+          opacity: 1,  // Fully opaque on hover
+          borderRadius: '0 0 10px 10px',  // Increase border-radius on hover
+        },
+        '&.MuiPaper-root': {
+          backgroundColor: isDarkMode ? '#333' : '#1976d2',  // Ensure it stays in dark mode
+        }
+      }}
+    >
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           <AdbIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} />
@@ -49,14 +66,14 @@ function ResponsiveAppBar({ isDarkMode, toggleTheme }) {
             sx={{
               mr: 2,
               display: { xs: 'none', md: 'flex' },
-              fontFamily: 'monospace',
               fontWeight: 700,
+              fontFamily: "Poppins", 
               letterSpacing: '.3rem',
               color: 'inherit',
               textDecoration: 'none',
             }}
           >
-            LOGO
+            <p className='navHead'>Kavindu.</p>
           </Typography>
 
           <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
@@ -126,8 +143,6 @@ function ResponsiveAppBar({ isDarkMode, toggleTheme }) {
           <Box sx={{ flexGrow: 0, display: 'flex', alignItems: 'center' }}>
             {/* Dark Mode Toggle */}
             <Toggle isChecked={isDarkMode} handleChange={toggleTheme} />
-
-            
           </Box>
         </Toolbar>
       </Container>
