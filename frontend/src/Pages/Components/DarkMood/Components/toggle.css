@@ -2,9 +2,7 @@
   display: flex;
   flex-direction: column; /* Stack items vertically */
   align-items: center;   
-  position: absolute;
-  top: 1em;
-  right: 2em;
+  position: relative;
   /* Add media query for responsiveness */
 }
 
@@ -20,8 +18,7 @@
   font-size: 28px;        /* Larger font size for visibility */
   display: flex;
   justify-content: center;
-  align-items: center;
-  margin-bottom: 10px;    /* Space between the label and checkbox */
+  align-items: center;   /* Space between the label and checkbox */
   user-select: none;      /* Prevent text selection */
   transition: background-color 0.3s; /* Smooth background color transition */
 }
@@ -29,7 +26,6 @@
 /* Adjust padding and font size for smaller screens */
 @media (max-width: 600px) {
   .toggle-container{
-    right: 1.5em;
   }
   .toggle-label {
     padding: 8px 16px;
@@ -39,7 +35,6 @@
 
 @media (max-width: 400px) {
   .toggle-container{
-    right: 1em;
   }
   .toggle-label {
     padding: 6px 12px;

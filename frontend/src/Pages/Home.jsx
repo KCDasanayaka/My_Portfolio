@@ -1,5 +1,4 @@
-import React, { useState, useEffect } from 'react';
-import NavBar from '../Pages/Components/NavBar'; // Ensure NavBar is correctly imported
+import React, { useState, useEffect } from 'react';// Ensure NavBar is correctly imported
 import './home.css';
 import github from '../assets/github.Pro.png';
 import behance from '../assets/behance.Pro.png';
@@ -149,7 +148,6 @@ const Home = () => {
 
   return (
     <div className="homeFirst">
-      <NavBar />
       <div className="home">
         <section className='section1'>
           <div className="firstScreen">

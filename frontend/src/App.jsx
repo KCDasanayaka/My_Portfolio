@@ -1,8 +1,7 @@
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import React, { useState } from 'react';
 import Home from './Pages/Home';
-import NavBar from './Pages/Components/NavBar';
-import { Toggle } from './Pages/Components/DarkMood/Components/Toggle';
+import ResponsiveAppBar from './Pages/Components/NavBar';
 import './App.css';
 
 function App() {
@@ -15,16 +14,13 @@ function App() {
   return (
     <div className="App" data-theme={isDarkMode ? "dark" : "light"}>
       <Router>
+        {/* Pass isDarkMode and toggleTheme to ResponsiveAppBar */}
+        <ResponsiveAppBar isDarkMode={isDarkMode} toggleTheme={toggleTheme} />
         <Routes>
           <Route 
             path="/" 
             element={
               <>
-                <div className={isDarkMode ? 'dark-mode' : 'light-mode'}>
-                  <Toggle isChecked={isDarkMode} handleChange={toggleTheme} />
-                  
-                </div>
-                
                 <Home />
               </>
             } 
