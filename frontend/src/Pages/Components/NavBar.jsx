@@ -41,7 +41,8 @@ function ResponsiveAppBar({ isDarkMode, toggleTheme }) {
       position="static"
       sx={{ 
         backgroundColor: isDarkMode ? '#333' : '#1976d2',  // Dynamic background color
-        opacity: 0.5,  // Set initial opacity
+        opacity: 1,  // Set initial opacity
+        border:'1px solid black',
         borderRadius: '0 0 10px 10px',  // Set initial border-radius
         boxShadow: 'none',  // Optional: remove shadow
         transition: '0.3s',  // Smooth transition for hover effects
