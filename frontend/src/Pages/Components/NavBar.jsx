@@ -9,7 +9,7 @@ import MenuIcon from '@mui/icons-material/Menu';
 import Container from '@mui/material/Container';
 import Button from '@mui/material/Button';
 import MenuItem from '@mui/material/MenuItem';
-import { Toggle } from './DarkMood/Components/Toggle'  // Import your custom Toggle component
+import { Toggle } from './DarkMood/Components/Toggle';  // Import your custom Toggle component
 
 const pages = ['Projects', 'Blogs', 'Say Hi!'];
 
@@ -25,10 +25,13 @@ function ResponsiveAppBar({ isDarkMode, toggleTheme }) {
   };
 
   return (
-    <AppBar position="static" sx={{ 
-      backgroundColor: isDarkMode ? '#121212' : '#ffffff', // Toggle background based on dark mode prop
-      color: isDarkMode ? '#fff' : '#000', // Toggle text color
-    }}>
+    <AppBar position="static" 
+      sx={{ 
+        backgroundColor: isDarkMode ? '#121212' : '#ffffff', // Toggle background based on dark mode prop
+        color: isDarkMode ? '#fff' : '#000', // Toggle text color
+        padding: { xs: '0px', md: '5px 50px' }, // Padding is 0 on mobile (xs), 5px 50px on medium (md) and larger
+      }}
+    >
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           <Typography
@@ -50,6 +53,7 @@ function ResponsiveAppBar({ isDarkMode, toggleTheme }) {
             Kavindu.
           </Typography>
 
+          {/* Mobile Menu Icon */}
           <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' }, justifyContent: 'flex-end' }}>
             <IconButton
               size="large"
@@ -85,6 +89,7 @@ function ResponsiveAppBar({ isDarkMode, toggleTheme }) {
             </Menu>
           </Box>
 
+          {/* Desktop Menu */}
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' }, justifyContent: 'flex-end' }}>
             {pages.map((page) => (
               <Button
@@ -98,7 +103,7 @@ function ResponsiveAppBar({ isDarkMode, toggleTheme }) {
           </Box>
 
           {/* Dark Mode Toggle */}
-          <Box sx={{ flexGrow: 0, display: 'flex', alignItems: 'center' }}>
+          <Box sx={{ flexGrow: 0, display: 'flex', alignItems: 'center', justifyContent: 'center', ml: 2 }}>
             {/* Use your custom Toggle component */}
             <Toggle isChecked={isDarkMode} handleChange={toggleTheme} />
           </Box>

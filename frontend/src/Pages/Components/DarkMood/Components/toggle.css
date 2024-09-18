@@ -12,8 +12,7 @@
 
 .toggle-label {
   z-index: 100;
-  border-radius: 20px;    /* Rounded corners */
-  padding: 10px 20px;     /* Space around the text */
+  border-radius: 20px;     /* Space around the text */
   cursor: pointer;        /* Pointer cursor on hover */
   font-size: 28px;        /* Larger font size for visibility */
   display: flex;
@@ -28,7 +27,6 @@
   .toggle-container{
   }
   .toggle-label {
-    padding: 8px 16px;
     font-size: 24px;
   }
 }
@@ -37,7 +35,6 @@
   .toggle-container{
   }
   .toggle-label {
-    padding: 6px 12px;
     font-size: 20px;
   }
 }
