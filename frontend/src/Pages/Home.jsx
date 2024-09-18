@@ -148,7 +148,9 @@ const Home = () => {
 
   return (
     <div className="homeFirst">
+
       <div className="home">
+        
         <section className='section1'>
           <div className="firstScreen">
             <div className="firstLeft">

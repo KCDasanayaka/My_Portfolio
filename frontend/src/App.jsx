@@ -2,6 +2,8 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import React, { useState } from 'react';
 import Home from './Pages/Home';
 import ResponsiveAppBar from './Pages/Components/NavBar';
+import Blog from './Pages/Blog';
+import Contact from './Pages/Contact';
 import './App.css';
 
 function App() {
@@ -25,6 +27,8 @@ function App() {
               </>
             } 
           />
+          <Route path='/blog' element={<Blog/>}/>
+          <Route path='/contact' element={<Contact/>}/>
         </Routes>
       </Router>
     </div>

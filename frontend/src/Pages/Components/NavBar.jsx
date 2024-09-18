@@ -9,9 +9,14 @@ import MenuIcon from '@mui/icons-material/Menu';
 import Container from '@mui/material/Container';
 import Button from '@mui/material/Button';
 import MenuItem from '@mui/material/MenuItem';
+import { Link } from 'react-router-dom';  // Import Link from react-router-dom
 import { Toggle } from './DarkMood/Components/Toggle';  // Import your custom Toggle component
 
-const pages = ['Projects', 'Blogs', 'Say Hi!'];
+const pages = [
+  { name: 'Projects', path: '/' },      // Example project page, you can adjust it as needed
+  { name: 'Blogs', path: '/blog' },     // Link to Blog page
+  { name: 'Say Hi!', path: '/contact' } // Link to Contact page
+];
 
 function ResponsiveAppBar({ isDarkMode, toggleTheme }) {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
@@ -25,11 +30,12 @@ function ResponsiveAppBar({ isDarkMode, toggleTheme }) {
   };
 
   return (
-    <AppBar position="static" 
+    <AppBar position="relative" 
       sx={{ 
         backgroundColor: isDarkMode ? '#121212' : '#ffffff', // Toggle background based on dark mode prop
         color: isDarkMode ? '#fff' : '#000', // Toggle text color
-        padding: { xs: '0px', md: '5px 50px' }, // Padding is 0 on mobile (xs), 5px 50px on medium (md) and larger
+        padding: { xs: '0px', md: '0 50px' }, // Padding is 0 on mobile (xs), 5px 50px on medium (md) and larger
+        gap:'20px'
       }}
     >
       <Container maxWidth="xl">
@@ -82,8 +88,11 @@ function ResponsiveAppBar({ isDarkMode, toggleTheme }) {
               sx={{ display: { xs: 'block', md: 'none' } }}
             >
               {pages.map((page) => (
-                <MenuItem key={page} onClick={handleCloseNavMenu}>
-                  <Typography textAlign="center">{page}</Typography>
+                <MenuItem key={page.name} onClick={handleCloseNavMenu}>
+                  {/* Use Link inside MenuItem */}
+                  <Link to={page.path} style={{ textDecoration: 'none', color: 'inherit' }}>
+                    <Typography textAlign="center">{page.name}</Typography>
+                  </Link>
                 </MenuItem>
               ))}
             </Menu>
@@ -93,11 +102,14 @@ function ResponsiveAppBar({ isDarkMode, toggleTheme }) {
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' }, justifyContent: 'flex-end' }}>
             {pages.map((page) => (
               <Button
-                key={page}
+                key={page.name}
                 onClick={handleCloseNavMenu}
                 sx={{ my: 2, color: isDarkMode ? 'white' : 'black', display: 'block' }}
               >
-                {page}
+                {/* Use Link inside Button */}
+                <Link to={page.path} style={{ textDecoration: 'none', color: isDarkMode ? 'white' : 'black' }}>
+                  {page.name}
+                </Link>
               </Button>
             ))}
           </Box>
