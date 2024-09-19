@@ -9,6 +9,18 @@ import Logo from '../assets/Logo.png';
 import figma from '../assets/tool.png';
 import { Button } from '@mui/material';
 import { styled } from '@mui/material/styles';
+import node from '../assets/pngegg (1).png';
+import express from '../assets/pngegg (2).png';
+import mongo from '../assets/pngegg (3).png';
+import mySQL from '../assets/pngegg (4).png';
+import php from '../assets/pngegg (5).png';
+import js from '../assets/pngegg (6).png';
+import ts from '../assets/pngegg (7).png';
+import figma from '../assets/pngegg (8).png';
+import react from '../assets/pngegg.png';
+import pr from '../assets/pngegg (9).png';
+import ae from '..assetspngegg (10).png';
+import ps from '..assetspngegg (11).png';
 import 'animate.css';
 
 // StyledButton component definition
@@ -331,6 +343,19 @@ const Home = () => {
               
               </div>
             </div>
+          </div>
+        </section>
+        <section className='section4'>
+          <div className="tech">
+              <div className="techup">
+                <img src={react} alt=' '/>
+                <img src={node} alt=''/>
+                <imh src={express} alt=' '/>
+                <img src={mongo} alt=' '/>
+                <img src={php} alt=' '/>
+                <img src={mySQL} alt=' '/>
+
+              </div>
           </div>
         </section>
       </div>
