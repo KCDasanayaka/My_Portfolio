@@ -16,11 +16,11 @@ import mySQL from '../assets/pngegg (4).png';
 import php from '../assets/pngegg (5).png';
 import js from '../assets/pngegg (6).png';
 import ts from '../assets/pngegg (7).png';
-import figma from '../assets/pngegg (8).png';
+import figma1 from '../assets/pngegg (8).png';
 import react from '../assets/pngegg.png';
 import pr from '../assets/pngegg (9).png';
-import ae from '..assetspngegg (10).png';
-import ps from '..assetspngegg (11).png';
+import ae from '../assets/pngegg (10).png';
+import ps from '../assets/pngegg (11).png';
 import 'animate.css';
 
 // StyledButton component definition
