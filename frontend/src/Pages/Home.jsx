@@ -350,7 +350,7 @@ const Home = () => {
               <div className="techup">
                 <img src={react} alt=' '/>
                 <img src={node} alt=''/>
-                <imh src={express} alt=' '/>
+                <img src={express} alt=' '/>
                 <img src={mongo} alt=' '/>
                 <img src={php} alt=' '/>
                 <img src={mySQL} alt=' '/>
@@ -358,7 +358,7 @@ const Home = () => {
               <div className="techup">
                 <img src={js} alt=' '/>
                 <img src={ts} alt=''/>
-                <imh src={figma1} alt=' '/>
+                <img src={figma1} alt=' '/>
                 <img src={ps} alt=' '/>
                 <img src={pr} alt=' '/>
                 <img src={ae} alt=' '/>

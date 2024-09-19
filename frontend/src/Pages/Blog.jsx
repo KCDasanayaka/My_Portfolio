@@ -1,6 +1,9 @@
 // Blog.jsx
 import React from 'react';
 import './blog.css';
+import blogimg1 from '../assets/Blog1.png';
+import blogimg2 from '../assets/Blog2.png';
+import figma from '../assets/tool.png';
 
 const Blog = () => {
   return (
@@ -11,11 +14,24 @@ const Blog = () => {
           </svg>
       </div>
       <section className='blogSection'>
-          <div className="myWorks">
-            <h1 className='mw-head'>My BLOGS</h1>
-            <p className='mw-subhead'>Read my latest articles</p>
+          <div className="bgWorks">
+            <h1 className='bg-head'>My BLOGS</h1>
+            <p className='bg-subhead'>Read my latest articles</p>
+            <div className="bgbox">
+            <div className='bg-box1'>
+                <img src={blogimg1} alt='Project' className='bgImage1' />
+                <div className="mw-protop" style={{margin:'5% 0 0 0'}}>
+                  <div className="mw-fimgabox">
+                    <img src={figma} alt='Figma' className='mw-figma' />
+                  </div>
+                  <h3 style={{margin:'auto'}}> Case Study</h3>
+                </div>
+                <p className='mw-detail'>Coding Enablement Platform</p>
+                
+              </div>
             </div>
-            </section>
+          </div>
+      </section>
     </div>
   );
 };

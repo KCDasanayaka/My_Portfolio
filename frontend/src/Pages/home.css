@@ -380,9 +380,10 @@ html {
   align-items: center;
   justify-content: center;
   gap: 5%;
+  margin-bottom: 5%;
 }
 .techup img{
-  width: 10%;
+  width: 8%;
 }
 /** For tablet devices **/
 @media (min-width: 768px) and (max-width: 1023px) {
