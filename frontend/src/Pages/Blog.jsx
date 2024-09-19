@@ -29,6 +29,17 @@ const Blog = () => {
                 <p className='mw-detail'>Coding Enablement Platform</p>
                 
               </div>
+              <div className='bg-box1'>
+                <img src={blogimg2} alt='Project' className='bgImage1' />
+                <div className="mw-protop" style={{margin:'5% 0 0 0'}}>
+                  <div className="mw-fimgabox">
+                    <img src={figma} alt='Figma' className='mw-figma' />
+                  </div>
+                  <h3 style={{margin:'auto'}}> Case Study</h3>
+                </div>
+                <p className='mw-detail'>Coding Enablement Platform</p>
+                
+              </div>
             </div>
           </div>
       </section>
