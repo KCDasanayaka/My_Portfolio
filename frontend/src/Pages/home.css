@@ -64,6 +64,7 @@ html {
   flex-direction: row;
   align-items: center;
   padding: 5%;
+  margin-top: 5%;
   margin-bottom: 10%;
   flex: 2;
 }
@@ -462,10 +463,13 @@ html {
 
   .firstScreen {
     padding: 0 5%;
+    margin-top: 10%;
+    
   }
 
   .firstLeft {
     width: 50%;
+    height: 50%;
   }
 
   .firstRight img {
@@ -473,6 +477,9 @@ html {
   }
   .ab-subhead{
     font-size: 1.2rem;
+  }
+  .console-container{
+    font-size: 220%;
   }
 }
 

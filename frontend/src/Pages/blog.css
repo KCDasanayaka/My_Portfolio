@@ -1,0 +1,41 @@
+.blog{
+    background-color: var(--background-color);
+}
+.blogSection{
+    height: 100%;
+}
+
+.custom-shape-divider-top-1726775091 {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.custom-shape-divider-top-1726775091 svg {
+    position: relative;
+    display: block;
+    width: calc(143% + 1.3px);
+    height: 106px;
+}
+
+.custom-shape-divider-top-1726775091 .shape-fill {
+    fill: var(--background-color);
+}
+
+/** For tablet devices **/
+@media (min-width: 768px) and (max-width: 1023px) {
+    .custom-shape-divider-top-1726775091 svg {
+        width: calc(143% + 1.3px);
+        height: 70px;
+    }
+}
+
+/** For mobile devices **/
+@media (max-width: 767px) {
+    .custom-shape-divider-top-1726775091 svg {
+        width: calc(143% + 1.3px);
+        height: 42px;
+    }
+}

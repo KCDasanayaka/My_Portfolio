@@ -30,14 +30,17 @@ function ResponsiveAppBar({ isDarkMode, toggleTheme }) {
   };
 
   return (
-    <AppBar position="relative" 
-      sx={{ 
-        backgroundColor: isDarkMode ? '#121212' : '#ffffff', // Toggle background based on dark mode prop
-        color: isDarkMode ? '#fff' : '#000', // Toggle text color
-        padding: { xs: '0px', md: '0 50px' }, // Padding is 0 on mobile (xs), 5px 50px on medium (md) and larger
-        gap:'20px'
-      }}
-    >
+    <AppBar
+        position="fixed" // Make the AppBar fixed at the top
+        sx={{
+          top: 0,
+          backgroundColor: isDarkMode ? '#121212' : '#ffffff', // Toggle background based on dark mode prop
+          color: isDarkMode ? '#fff' : '#000', // Toggle text color
+          padding: { xs: '0px', md: '0 50px' }, // Padding is 0 on mobile (xs), 50px on medium (md) and larger
+          gap: '20px',
+          zIndex: 1200, // Ensure AppBar stays above other elements
+        }}
+      >
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           <Typography
