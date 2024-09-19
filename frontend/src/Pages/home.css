@@ -365,6 +365,24 @@ html {
   margin-bottom: 10px;
   color: var(--text-color);
 }
+
+.tech{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 5% 10%;
+}
+.techup{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 5%;
+}
+.techup img{
+  width: 10%;
+}
 /** For tablet devices **/
 @media (min-width: 768px) and (max-width: 1023px) {
   .custom-shape-divider-top-1726385316 svg {
