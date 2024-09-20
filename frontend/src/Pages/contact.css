@@ -1,7 +1,7 @@
 .contact{
     background-color: var(--background-color);
     width: 100%;
-    margin-top: 5%;
+    margin-top: 2%;
     margin-bottom: 5%;
 }
 .cnt-flex{
@@ -10,6 +10,7 @@
     align-items: center;
     justify-content: center;
     gap: 5%;
+    margin: -4% 5%;
 }
 .cnt-wave{
     padding: 5%;
@@ -18,14 +19,102 @@
 .cnt-right{
     background-color: #2AD87F;
     width: 100%;
-    padding: 2%;
-    border-radius: 50px 0 0 50px;
+    max-height: 450px;
+    border-radius: 30px;
+    padding: 1%;
 }
 .cnt-para{
     font-size: 1rem;
     text-align: justify;
     padding: 0 5%;
-    color: white;
+    color: #1E242B;
+}
+.ctn-head{
+    font-size: 2.5rem;
+    margin: auto;
+}
+.ctn-subhead{
+    font-size: 0.75rem;
+    margin: auto;
+}
+
+$green: #1ECD97;
+$gray: #bbbbbb;
+* {
+  font-family: 'Roboto', sans-serif;
+}
+.container {
+  position: absolute;
+  top:50%;
+  left:50%;
+  margin-left: -65px;
+  margin-top: -20px;
+  width: 130px;
+  height: 40px;
+  text-align: center;
+}
+button {
+  outline:none;
+  height: 40px;
+  text-align: center;
+  width: 130px;
+  border-radius:40px;
+  background: #fff;
+  border: 2px solid $green;
+  color:$green;
+  letter-spacing:1px;
+  text-shadow:0;
+  font:{
+    size:12px;
+    weight:bold;
+  }
+  cursor: pointer;
+  transition: all 0.25s ease;
+  &:hover {
+    color:white;
+    background: $green;
+  }
+  &:active {
+    //letter-spacing: 2px;
+    letter-spacing: 2px ;
+  }
+  &:after {
+    content:"SUBMIT";
+  }
+}
+.onclic {
+  width: 40px;
+  border-color:$gray;
+  border-width:3px;
+  font-size:0;
+  border-left-color:$green;
+  animation: rotating 2s 0.25s linear infinite;
+
+  &:after {
+    content:"";
+  }
+  &:hover {
+    color:$green;
+    background: white;
+  }
+}
+.validate {
+  font-size:13px;
+  color: white;
+  background: $green;
+  &:after {
+    font-family:'FontAwesome';
+    content:"\f00c";
+  }
+}
+
+@keyframes rotating {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 @media (min-width: 768px) and (max-width: 1023px) {
@@ -45,4 +134,66 @@
         font-size: 1rem;
     }
 
+}
+
+
+
+/* Styles for medium screens (tablets) */
+@media (max-width: 1023px) {
+  .cnt-flex {
+    flex-direction: column; /* Stack the elements vertically */
+    align-items: center; /* Center the content */
+    gap: 3%; /* Reduce the gap between elements */
+    margin-top: 0;
+    margin: 0 5%;
+  }
+
+  .cnt-right {
+    width: 70%; /* Slightly reduce the width for tablets */
+    padding: 4%; /* Increase padding for breathing space */
+    border-radius: 30px; /* Adjust the border-radius for a smoother look */
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5), 0 1px 2px rgba(0, 0, 0, 0.3); /* Softer shadow */
+  }
+
+  .cnt-wave {
+    width: 50%; /* Make the image smaller */
+    padding: 2%;
+  }
+  .ctn-head{
+    font-size: 1.5rem;
+}
+.ctn-subhead{
+    font-size: 0.5rem;
+}
+.cnt-para{
+    font-size: 1rem;
+}
+}
+
+/* Styles for small screens (mobile) */
+@media (max-width: 767px) {
+  .cnt-flex {
+    flex-direction: column; /* Stack vertically on small screens */
+    align-items: center;
+    gap: 5%; /* Increase the gap between items */
+    margin: 0 5%;
+  }
+
+  .cnt-right {
+    width: 70%; /* Full width for small screens */
+    border-radius: 20px; /* Smaller radius for compact design */
+    max-height: none;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.4), 0 1px 2px rgba(0, 0, 0, 0.2); /* Subtle shadow for mobile */
+  }
+
+  .cnt-wave {
+    width: 70%; /* Reduce the image size on small screens */
+    padding: 2%;
+  }
+  .ctn-head{
+    font-size: 1.5rem;
+}
+.ctn-subhead{
+    font-size: 0.5rem;
+}
 }
