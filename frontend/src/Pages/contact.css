@@ -1,0 +1,48 @@
+.contact{
+    background-color: var(--background-color);
+    width: 100%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+.cnt-flex{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 5%;
+}
+.cnt-wave{
+    padding: 5%;
+    width: 35%;
+}
+.cnt-right{
+    background-color: #2AD87F;
+    width: 100%;
+    padding: 2%;
+    border-radius: 50px 0 0 50px;
+}
+.cnt-para{
+    font-size: 1rem;
+    text-align: justify;
+    padding: 0 5%;
+    color: white;
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+    .contact{
+        margin-top: 10%;
+        top: 5%;
+    }
+}
+@media (max-width: 767px) {
+    .contact{
+        margin-top: 10%;
+    }
+    .bg-head{
+        font-size: 3rem;
+    }
+    .bg-subhead{
+        font-size: 1rem;
+    }
+
+}
