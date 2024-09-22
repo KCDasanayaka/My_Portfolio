@@ -22,6 +22,7 @@ import pr from '../assets/pngegg (9).png';
 import ae from '../assets/pngegg (10).png';
 import ps from '../assets/pngegg (11).png';
 import 'animate.css';
+import { useNavigate } from 'react-router-dom';
 
 // StyledButton component definition
 
@@ -64,6 +65,8 @@ const StyledButton = styled(Button)(({ active }) => ({
 const ProjectCard = ({ category }) => {
   const [isHovered, setIsHovered] = useState(false);
 
+
+
   return (
     <div
       className={`mw-box1 ${isHovered ? 'active' : ''}`}
@@ -100,6 +103,11 @@ const Home = () => {
     setActiveButton(button === activeButton ? null : button);
     setActiveCategory(button);
   };
+
+  const navigate = useNavigate();
+  function behanceAcc() {
+    navigate('behance.net/kavindudasanay');
+  }
 
   useEffect(() => {
     consoleText(['UI UX Engineer', 'Full-Stack Dev', 'Undergraduate'], 'text', ['#2AD87F']);
@@ -178,7 +186,7 @@ const Home = () => {
               </div>
               <div className="socialMedia">
                 <img src={github} alt="GitHub" />
-                <img src={behance} alt="Behance" />
+                <img src={behance} onClick={behanceAcc} alt="Behance" />
                 <img src={linkedin} alt="LinkedIn" />
               </div>
               <div className="aboutMe">
