@@ -108,6 +108,14 @@ const Home = () => {
     window.location.href = 'https://www.behance.net/kavindudasanay';
   }
 
+  function gitAcc() {
+    window.location.href = 'https://www.linkedin.com/in/kavindu-dasanayaka-6a67352';
+  }
+
+  function linkedinAcc() {
+    window.location.href = 'https://www.linkedin.com/in/kavindu-dasanayaka-6a67352';
+  }
+
   useEffect(() => {
     consoleText(['UI UX Engineer', 'Full-Stack Dev', 'Undergraduate'], 'text', ['#2AD87F']);
   }, []);
@@ -184,9 +192,9 @@ const Home = () => {
                 </div>
               </div>
               <div className="socialMedia">
-                <img src={github} alt="GitHub" />
+                <img src={github} alt="GitHub" onClick={gitAcc} className='sociallogo'/>
                 <img src={behance} onClick={behanceAcc} alt="Behance" className='sociallogo'/>
-                <img src={linkedin} alt="LinkedIn" />
+                <img src={linkedin} alt="LinkedIn" onClick={linkedinAcc} className='sociallogo'/>
               </div>
               <div className="aboutMe">
                 <Button
