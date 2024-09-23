@@ -116,6 +116,12 @@ const Home = () => {
     window.location.href = 'https://www.linkedin.com/in/kavindu-dasanayaka-6a67352';
   }
 
+  const aboutSection = () => {
+    const targetSection = document.getElementById('aboutMe');
+    if (targetSection) {
+      targetSection.scrollIntoView({ behavior: 'smooth' }); // Smooth scroll
+    }
+  };
   useEffect(() => {
     consoleText(['UI UX Engineer', 'Full-Stack Dev', 'Undergraduate'], 'text', ['#2AD87F']);
   }, []);
@@ -234,7 +240,7 @@ const Home = () => {
                       marginTop:'-5%',
                     },
                   }}
-                >
+                 onClick={aboutSection}>
                   About Me
                 </Button>
               </div>
@@ -309,7 +315,7 @@ const Home = () => {
                   <path d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z" class="shape-fill"></path>
               </svg>
           </div>
-          <div className="about">
+          <div className="about" id='aboutMe'>
             <div className="aboutleft">
               <img src={cvimg} alt=' ' width={'80%'}/>
             </div>
