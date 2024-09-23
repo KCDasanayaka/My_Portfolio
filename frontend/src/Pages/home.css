@@ -385,6 +385,21 @@ html {
 .techup img{
   width: 8%;
 }
+.sociallogo {
+  transition: transform 0.3s ease;
+  cursor: pointer; /* Smooth transition for scaling */
+}
+
+.sociallogo:hover {
+  transform: scale(1.2);
+  border-radius: 50%;
+  border:solid 2px #2AD87F /* Scale up to 1.2 on hover */
+}
+
+.sociallogo:active {
+  transform: scale(1); /* Return to normal size when clicked */
+}
+
 /** For tablet devices **/
 @media (min-width: 768px) and (max-width: 1023px) {
   .custom-shape-divider-top-1726385316 svg {

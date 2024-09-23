@@ -104,9 +104,8 @@ const Home = () => {
     setActiveCategory(button);
   };
 
-  const navigate = useNavigate();
   function behanceAcc() {
-    navigate('behance.net/kavindudasanay');
+    window.location.href = 'https://www.behance.net/kavindudasanay';
   }
 
   useEffect(() => {
@@ -186,7 +185,7 @@ const Home = () => {
               </div>
               <div className="socialMedia">
                 <img src={github} alt="GitHub" />
-                <img src={behance} onClick={behanceAcc} alt="Behance" />
+                <img src={behance} onClick={behanceAcc} alt="Behance" className='sociallogo'/>
                 <img src={linkedin} alt="LinkedIn" />
               </div>
               <div className="aboutMe">
