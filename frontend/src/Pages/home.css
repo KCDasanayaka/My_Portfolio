@@ -499,6 +499,11 @@ html {
   }
 }
 
+@media screen and (max-width: 960px) {
+  .mw-projectcard {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns on smaller screens */
+  }
+}
 /* Tablets */
 @media screen and (max-width: 768px) {
   .mw-projectcard {
@@ -550,6 +555,11 @@ html {
   }
 }
 
+@media (max-width: 600px) {
+  .mw-projectcard {
+    grid-template-columns: 1fr; /* 1 column on very small screens */
+  }
+}
 /* Mobile */
 @media screen and (max-width: 480px) {
   

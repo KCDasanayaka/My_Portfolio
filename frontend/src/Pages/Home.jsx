@@ -72,9 +72,10 @@ const projectData = {
     {
       id: 1,
       category: 'UI',
-      title: 'Buildmate+',
+      title: 'UI',
       description: 'Buildmate+ is an innovative construction enablement platform designed to streamline project management.',
       image: proimage1,
+      titleImg: figma,
       githubLink: github,
       behanceLink: behance
     },
@@ -84,6 +85,7 @@ const projectData = {
       title: 'DesignHub',
       description: 'DesignHub is a collaborative platform that connects designers with clients seeking creative solutions.',
       image: Tourism,
+      titleImg: figma,
       githubLink: github,
       behanceLink: behance
     },
@@ -132,6 +134,7 @@ const projectData = {
       title: 'CodeMaster',
       description: 'CodeMaster is a coding platform to enhance developers’ skills with hands-on projects and challenges.',
       image: proimage1,
+      titleImg: figma,
       githubLink: github,
       behanceLink: behance
     },
@@ -170,7 +173,7 @@ const projectData = {
 };
 
 // Modify ProjectCard to accept props
-const ProjectCard = ({ title, description, image, githubLink, behanceLink }) => {
+const ProjectCard = ({ title, description, image, githubLink, behanceLink,  titleImg }) => {
   const [isHovered, setIsHovered] = useState(false);
 
   return (
@@ -181,6 +184,7 @@ const ProjectCard = ({ title, description, image, githubLink, behanceLink }) => 
     >
       <img src={image} alt={title} className='proImage1' />
       <div className="mw-protop" style={{ margin: '5% 0 0 0' }}>
+        <img src={titleImg} alt=' '/>
         <h3 style={{ margin: 'auto' }}>{title} Case Study</h3>
       </div>
       <p className='mw-detail'>{description}</p>
