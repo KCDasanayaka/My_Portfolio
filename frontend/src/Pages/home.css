@@ -230,10 +230,10 @@ html {
 }
 
 .mw-projectcard {
-  display: flex;
-  flex-direction: row;
-  gap: 20px;
-  padding: 5%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 columns */
+  gap: 20px; /* Add space between the cards */
+  margin: 20px 0; /* Margin between rows */
 }
 
 .mw-box1 {

@@ -83,7 +83,43 @@ const projectData = {
       category: 'UI',
       title: 'DesignHub',
       description: 'DesignHub is a collaborative platform that connects designers with clients seeking creative solutions.',
-      image: proimage1,
+      image: Tourism,
+      githubLink: github,
+      behanceLink: behance
+    },
+    {
+      id: 3,
+      category: 'UI',
+      title: 'DesignHub',
+      description: 'DesignHub is a collaborative platform that connects designers with clients seeking creative solutions.',
+      image: TransportMng,
+      githubLink: github,
+      behanceLink: behance
+    },
+    {
+      id: 4,
+      category: 'UI',
+      title: 'DesignHub',
+      description: 'DesignHub is a collaborative platform that connects designers with clients seeking creative solutions.',
+      image: PortFolio,
+      githubLink: github,
+      behanceLink: behance
+    },
+    {
+      id: 5,
+      category: 'UI',
+      title: 'DesignHub',
+      description: 'DesignHub is a collaborative platform that connects designers with clients seeking creative solutions.',
+      image: Pharma,
+      githubLink: github,
+      behanceLink: behance
+    },
+    {
+      id: 6,
+      category: 'UI',
+      title: 'DesignHub',
+      description: 'DesignHub is a collaborative platform that connects designers with clients seeking creative solutions.',
+      image: BuildMate,
       githubLink: github,
       behanceLink: behance
     },
