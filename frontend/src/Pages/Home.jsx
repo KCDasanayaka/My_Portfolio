@@ -62,10 +62,75 @@ const StyledButton = styled(Button)(({ active }) => ({
   },
 }));
 
-const ProjectCard = ({ category }) => {
+const projectData = {
+  UI: [
+    {
+      id: 1,
+      category: 'UI',
+      title: 'Buildmate+',
+      description: 'Buildmate+ is an innovative construction enablement platform designed to streamline project management.',
+      image: proimage1,
+      githubLink: github,
+      behanceLink: behance
+    },
+    {
+      id: 2,
+      category: 'UI',
+      title: 'DesignHub',
+      description: 'DesignHub is a collaborative platform that connects designers with clients seeking creative solutions.',
+      image: proimage1,
+      githubLink: github,
+      behanceLink: behance
+    },
+    // Add more UI projects here
+  ],
+  Coding: [
+    {
+      id: 1,
+      category: 'Coding',
+      title: 'CodeMaster',
+      description: 'CodeMaster is a coding platform to enhance developers’ skills with hands-on projects and challenges.',
+      image: proimage1,
+      githubLink: github,
+      behanceLink: behance
+    },
+    {
+      id: 2,
+      category: 'Coding',
+      title: 'DevConnector',
+      description: 'DevConnector allows developers to connect, share ideas, and collaborate on open-source projects.',
+      image: proimage1,
+      githubLink: github,
+      behanceLink: behance
+    },
+    // Add more Coding projects here
+  ],
+  Designing: [
+    {
+      id: 1,
+      category: 'Designing',
+      title: 'BrandWave',
+      description: 'BrandWave is a branding platform that provides tools for creating stunning visual identities.',
+      image: proimage1,
+      githubLink: github,
+      behanceLink: behance
+    },
+    {
+      id: 2,
+      category: 'Designing',
+      title: 'CreativeStudio',
+      description: 'CreativeStudio is a design toolkit for freelance designers to create custom design solutions.',
+      image: proimage1,
+      githubLink: github,
+      behanceLink: behance
+    },
+    // Add more Designing projects here
+  ]
+};
+
+// Modify ProjectCard to accept props
+const ProjectCard = ({ title, description, image, githubLink, behanceLink }) => {
   const [isHovered, setIsHovered] = useState(false);
-
-
 
   return (
     <div
@@ -73,21 +138,18 @@ const ProjectCard = ({ category }) => {
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
-      <img src={proimage1} alt='Project' className='proImage1' />
-      <div className="mw-protop" style={{margin:'5% 0 0 0'}}>
-        <div className="mw-fimgabox">
-          <img src={figma} alt='Figma' className='mw-figma' />
-        </div>
-        <h3 style={{margin:'auto'}}>{category} Case Study</h3>
+      <img src={image} alt={title} className='proImage1' />
+      <div className="mw-protop" style={{ margin: '5% 0 0 0' }}>
+        <h3 style={{ margin: 'auto' }}>{title} Case Study</h3>
       </div>
-      <p className='mw-detail'>Coding Enablement Platform</p>
+      <p className='mw-detail'>{description}</p>
       <div className="hover-box">
-        <div className="hover-box-content" style={{padding:'15%'}}>
-          <h3>Buildmate+</h3>
-          <p style={{textAlign:'justify',fontSize:'13px'}}>Buildmate+ is an innovative construction enablement platform designed to streamline project management and connect clients with professionals and suppliers. </p>
-          <div className="mw-hoverbtn" style={{display:'flex',justifyContent:'flex-end', gap:'10px'}}>
-            <img src={github} alt="GitHub" style={{width:'35px'}}/>
-            <img src={behance} alt="Behance" style={{width:'35px'}}/>
+        <div className="hover-box-content" style={{ padding: '15%' }}>
+          <h3>{title}</h3>
+          <p style={{ textAlign: 'justify', fontSize: '13px' }}>{description}</p>
+          <div className="mw-hoverbtn" style={{ display: 'flex', justifyContent: 'flex-end', gap: '10px' }}>
+            <img src={githubLink} alt="GitHub" style={{ width: '35px' }} />
+            <img src={behanceLink} alt="Behance" style={{ width: '35px' }} />
           </div>
         </div>
       </div>
@@ -96,6 +158,7 @@ const ProjectCard = ({ category }) => {
 };
 
 const Home = () => {
+  
   const [activeButton, setActiveButton] = useState('UI'); // Set default active button
   const [activeCategory, setActiveCategory] = useState('UI'); // Default category
 
@@ -282,27 +345,49 @@ const Home = () => {
                 Designing
               </StyledButton>
             </div>
+
             <div className="mw-projects">
               {activeCategory === 'UI' && (
                 <div className="mw-projectcard">
-                  {[...Array(3)].map((_, i) => (
-                    <ProjectCard key={i} category='UI' />
+                  {projectData.UI.map((project) => (
+                    <ProjectCard
+                      key={project.id}
+                      title={project.title}
+                      description={project.description}
+                      image={project.image}
+                      githubLink={project.githubLink}
+                      behanceLink={project.behanceLink}
+                    />
                   ))}
                 </div>
               )}
 
               {activeCategory === 'Coding' && (
                 <div className="mw-projectcard">
-                  {[...Array(3)].map((_, i) => (
-                    <ProjectCard key={i} category='Coding' />
+                  {projectData.Coding.map((project) => (
+                    <ProjectCard
+                      key={project.id}
+                      title={project.title}
+                      description={project.description}
+                      image={project.image}
+                      githubLink={project.githubLink}
+                      behanceLink={project.behanceLink}
+                    />
                   ))}
                 </div>
               )}
 
               {activeCategory === 'Designing' && (
                 <div className="mw-projectcard">
-                  {[...Array(3)].map((_, i) => (
-                    <ProjectCard key={i} category='Designing' />
+                  {projectData.Designing.map((project) => (
+                    <ProjectCard
+                      key={project.id}
+                      title={project.title}
+                      description={project.description}
+                      image={project.image}
+                      githubLink={project.githubLink}
+                      behanceLink={project.behanceLink}
+                    />
                   ))}
                 </div>
               )}
