@@ -21,6 +21,11 @@ import react from '../assets/pngegg.png';
 import pr from '../assets/pngegg (9).png';
 import ae from '../assets/pngegg (10).png';
 import ps from '../assets/pngegg (11).png';
+import Tourism from '../assets/Tourism.png';
+import PortFolio from '../assets/PortFolio.png';
+import BuildMate from '../assets/BuildMate+.png';
+import TransportMng from '../assets/TransportMng.png';
+import Pharma from '../assets/Pharma.png';
 import 'animate.css';
 import { useNavigate } from 'react-router-dom';
 
