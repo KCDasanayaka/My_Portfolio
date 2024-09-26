@@ -27,6 +27,7 @@ import TransportMng from '../assets/TransportMng.png';
 import Pharma from '../assets/Pharma.png';
 import ChatWindow from '../assets/ChatWindowMockupView.png';
 import HostelMngMockup from '../assets/HostelMngMockup.png';
+import code from '../assets/code.png';
 import figma from '../assets/figma.png';
 import 'animate.css';
 import { useNavigate } from 'react-router-dom';
@@ -150,9 +151,11 @@ const projectData = {
       id: 1,
       category: 'Coding',
       title: 'CodeMaster',
+      Subtitle: 'React | Firebase',
+      SubDescription:'Real-time Chat Application',
       description: 'CodeMaster is a coding platform to enhance developers’ skills with hands-on projects and challenges.',
       image: ChatWindow,
-      titleImg: figma,
+      titleImg: code,
       githubLink: github,
       behanceLink: behance
     },
@@ -162,6 +165,7 @@ const projectData = {
       title: 'DevConnector',
       description: 'DevConnector allows developers to connect, share ideas, and collaborate on open-source projects.',
       image: BuildMate,
+      titleImg: code,
       githubLink: github,
       behanceLink: behance
     },
@@ -171,6 +175,7 @@ const projectData = {
       title: 'DevConnector',
       description: 'DevConnector allows developers to connect, share ideas, and collaborate on open-source projects.',
       image: HostelMngMockup,
+      titleImg: code,
       githubLink: github,
       behanceLink: behance
     },
@@ -180,6 +185,7 @@ const projectData = {
       title: 'DevConnector',
       description: 'DevConnector allows developers to connect, share ideas, and collaborate on open-source projects.',
       image: TransportMng,
+      titleImg: code,
       githubLink: github,
       behanceLink: behance
     },
@@ -452,8 +458,11 @@ const Home = () => {
                     <ProjectCard
                       key={project.id}
                       title={project.title}
+                      Subtitle={project.Subtitle}
+                      SubDescription={project.SubDescription}
                       description={project.description}
                       image={project.image}
+                      titleImg={project.titleImg}
                       githubLink={project.githubLink}
                       behanceLink={project.behanceLink}
                     />
