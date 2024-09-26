@@ -270,12 +270,12 @@ html {
 
 .mw-protop img {
   width: 20px;
-  filter: invert(100%);
 }
 
 .mw-detail {
   font-size: 1rem;
-  color: #555;
+  font-weight: 450;
+  color: #000000;
   margin: auto;
 }
 
@@ -478,9 +478,7 @@ html {
   }
 
   .firstScreen {
-    padding: 0 5%;
     margin-top: 10%;
-    
   }
 
   .firstLeft {

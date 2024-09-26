@@ -6,7 +6,6 @@ import linkedin from '../assets/linkedin.Pro.png';
 import proimage1 from '../assets/Artboard 1.png';
 import cvimg from '../assets/CVProfilePic.2.png';
 import Logo from '../assets/Logo.png';
-import figma from '../assets/tool.png';
 import { Button } from '@mui/material';
 import { styled } from '@mui/material/styles';
 import node from '../assets/pngegg (1).png';
@@ -28,6 +27,7 @@ import TransportMng from '../assets/TransportMng.png';
 import Pharma from '../assets/Pharma.png';
 import ChatWindow from '../assets/ChatWindowMockupView.png';
 import HostelMngMockup from '../assets/HostelMngMockup.png';
+import figma from '../assets/figma.png';
 import 'animate.css';
 import { useNavigate } from 'react-router-dom';
 
@@ -75,6 +75,8 @@ const projectData = {
       id: 1,
       category: 'UI',
       title: 'UI',
+      Subtitle: 'UI Case Study',
+      SubDescription:'Pizza Delivery Mobile App',
       description: 'Buildmate+ is an innovative construction enablement platform designed to streamline project management.',
       image: proimage1,
       titleImg: figma,
@@ -85,6 +87,8 @@ const projectData = {
       id: 2,
       category: 'UI',
       title: 'DesignHub',
+      Subtitle: 'UI Case Study',
+      SubDescription:'Tourism Promotion Platform',
       description: 'DesignHub is a collaborative platform that connects designers with clients seeking creative solutions.',
       image: Tourism,
       titleImg: figma,
@@ -95,8 +99,11 @@ const projectData = {
       id: 3,
       category: 'UI',
       title: 'DesignHub',
+      Subtitle: 'UI Design',
+      SubDescription:'Public Transport Management Platform',
       description: 'DesignHub is a collaborative platform that connects designers with clients seeking creative solutions.',
       image: TransportMng,
+      titleImg: figma,
       githubLink: github,
       behanceLink: behance
     },
@@ -104,8 +111,11 @@ const projectData = {
       id: 4,
       category: 'UI',
       title: 'DesignHub',
+      Subtitle: 'UI Design',
+      SubDescription:'Personal Portfolio Design',
       description: 'DesignHub is a collaborative platform that connects designers with clients seeking creative solutions.',
       image: PortFolio,
+      titleImg: figma,
       githubLink: github,
       behanceLink: behance
     },
@@ -113,8 +123,11 @@ const projectData = {
       id: 5,
       category: 'UI',
       title: 'DesignHub',
+      Subtitle: 'UI Case Study',
+      SubDescription:'Phramaceutical E-Commers Web Platform',
       description: 'DesignHub is a collaborative platform that connects designers with clients seeking creative solutions.',
       image: Pharma,
+      titleImg: figma,
       githubLink: github,
       behanceLink: behance
     },
@@ -122,8 +135,11 @@ const projectData = {
       id: 6,
       category: 'UI',
       title: 'DesignHub',
+      Subtitle: 'UI Design',
+      SubDescription:'Construction Enablement Platform',
       description: 'DesignHub is a collaborative platform that connects designers with clients seeking creative solutions.',
       image: BuildMate,
+      titleImg: figma,
       githubLink: github,
       behanceLink: behance
     },
@@ -193,7 +209,7 @@ const projectData = {
 };
 
 // Modify ProjectCard to accept props
-const ProjectCard = ({ title, description, image, githubLink, behanceLink,  titleImg }) => {
+const ProjectCard = ({ title, description, image, githubLink, behanceLink,  titleImg, Subtitle, SubDescription }) => {
   const [isHovered, setIsHovered] = useState(false);
 
   return (
@@ -205,12 +221,12 @@ const ProjectCard = ({ title, description, image, githubLink, behanceLink,  titl
       <img src={image} alt={title} className='proImage1' />
       <div className="mw-protop" style={{ margin: '5% 0 0 0' }}>
         <img src={titleImg} alt=' '/>
-        <h3 style={{ margin: 'auto' }}>{title} Case Study</h3>
+        <h3 style={{ margin: 'auto' }}>{Subtitle}</h3>
       </div>
-      <p className='mw-detail'>{description}</p>
+      <p className='mw-detail'>{SubDescription}</p>
       <div className="hover-box">
         <div className="hover-box-content" style={{ padding: '15%' }}>
-          <h3>{title}</h3>
+          <h3 style={{fontSize:'1.2rem'}}>{SubDescription}</h3>
           <p style={{ textAlign: 'justify', fontSize: '13px' }}>{description}</p>
           <div className="mw-hoverbtn" style={{ display: 'flex', justifyContent: 'flex-end', gap: '10px' }}>
             <img src={githubLink} alt="GitHub" style={{ width: '35px' }} />
@@ -418,8 +434,11 @@ const Home = () => {
                     <ProjectCard
                       key={project.id}
                       title={project.title}
+                      Subtitle={project.Subtitle}
+                      SubDescription={project.SubDescription}
                       description={project.description}
                       image={project.image}
+                      titleImg={project.titleImg}
                       githubLink={project.githubLink}
                       behanceLink={project.behanceLink}
                     />
