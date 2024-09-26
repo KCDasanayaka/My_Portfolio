@@ -26,6 +26,8 @@ import PortFolio from '../assets/PortFolio1.png';
 import BuildMate from '../assets/BuildMate.png';
 import TransportMng from '../assets/TransportMng.png';
 import Pharma from '../assets/Pharma.png';
+import ChatWindow from '../assets/ChatWindowMockupView.png';
+import HostelMngMockup from '../assets/HostelMngMockup.png';
 import 'animate.css';
 import { useNavigate } from 'react-router-dom';
 
@@ -133,7 +135,7 @@ const projectData = {
       category: 'Coding',
       title: 'CodeMaster',
       description: 'CodeMaster is a coding platform to enhance developers’ skills with hands-on projects and challenges.',
-      image: proimage1,
+      image: ChatWindow,
       titleImg: figma,
       githubLink: github,
       behanceLink: behance
@@ -143,7 +145,25 @@ const projectData = {
       category: 'Coding',
       title: 'DevConnector',
       description: 'DevConnector allows developers to connect, share ideas, and collaborate on open-source projects.',
-      image: proimage1,
+      image: BuildMate,
+      githubLink: github,
+      behanceLink: behance
+    },
+    {
+      id: 3,
+      category: 'Coding',
+      title: 'DevConnector',
+      description: 'DevConnector allows developers to connect, share ideas, and collaborate on open-source projects.',
+      image: HostelMngMockup,
+      githubLink: github,
+      behanceLink: behance
+    },
+    {
+      id: 4,
+      category: 'Coding',
+      title: 'DevConnector',
+      description: 'DevConnector allows developers to connect, share ideas, and collaborate on open-source projects.',
+      image: TransportMng,
       githubLink: github,
       behanceLink: behance
     },
