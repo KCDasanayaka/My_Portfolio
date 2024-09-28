@@ -189,6 +189,16 @@ const projectData = {
       githubLink: github,
       behanceLink: behance
     },
+    {
+      id: 5,
+      category: 'Coding',
+      title: 'DevConnector',
+      description: 'DevConnector allows developers to connect, share ideas, and collaborate on open-source projects.',
+      image: PortFolio,
+      titleImg: code,
+      githubLink: github,
+      behanceLink: behance
+    },
     // Add more Coding projects here
   ],
   Designing: [
@@ -259,7 +269,7 @@ const Home = () => {
   }
 
   function gitAcc() {
-    window.location.href = 'https://www.linkedin.com/in/kavindu-dasanayaka-6a67352';
+    window.location.href = 'https://github.com/KCDasanayaka';
   }
 
   function linkedinAcc() {
@@ -405,7 +415,7 @@ const Home = () => {
             </svg>
         </div>
         </section>
-        <section className='section2'>
+        <section className='section2'id= 'projects'>
           <div className="myWorks">
             <h1 className='mw-head'>My WORKS</h1>
             <p className='mw-subhead'>Journey through my digital innovations and creative explorations</p>

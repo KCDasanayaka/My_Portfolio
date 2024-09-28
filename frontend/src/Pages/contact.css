@@ -10,7 +10,7 @@
     align-items: center;
     justify-content: center;
     gap: 5%;
-    margin: -4% 5%;
+    margin: 0% 5%;
 }
 .cnt-wave{
     padding: 5%;
@@ -19,7 +19,6 @@
 .cnt-right{
     background-color: #2AD87F;
     width: 100%;
-    max-height: 450px;
     border-radius: 30px;
     padding: 1%;
 }
@@ -44,6 +43,9 @@
 
 /* Styles for medium screens (tablets) */
 @media (max-width: 1023px) {
+  .contact{
+
+  }
   .cnt-flex {
     flex-direction: column; /* Stack the elements vertically */
     align-items: center; /* Center the content */
@@ -76,6 +78,9 @@
 
 /* Styles for small screens (mobile) */
 @media (max-width: 767px) {
+  .contact{
+   margin-top: 10%; 
+  }
   .cnt-flex {
     flex-direction: column; /* Stack vertically on small screens */
     align-items: center;

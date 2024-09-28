@@ -9,13 +9,13 @@ import MenuIcon from '@mui/icons-material/Menu';
 import Container from '@mui/material/Container';
 import Button from '@mui/material/Button';
 import MenuItem from '@mui/material/MenuItem';
-import { Link } from 'react-router-dom';  // Import Link from react-router-dom
-import { Toggle } from './DarkMood/Components/Toggle';  // Import your custom Toggle component
+import { Link } from 'react-router-dom';
+import { Toggle } from './DarkMood/Components/Toggle'; 
 
 const pages = [
-  { name: 'Projects', path: '/' },      // Example project page, you can adjust it as needed
-  { name: 'Blogs', path: '/blog' },     // Link to Blog page
-  { name: 'Say Hi!', path: '/contact' } // Link to Contact page
+  { name: 'Projects', path: 'projects' },     
+  { name: 'Blogs', path: '/blog' },    
+  { name: 'Say Hi!', path: '/contact' } 
 ];
 
 function ResponsiveAppBar({ isDarkMode, toggleTheme }) {
@@ -31,14 +31,16 @@ function ResponsiveAppBar({ isDarkMode, toggleTheme }) {
 
   return (
     <AppBar
-        position="fixed" // Make the AppBar fixed at the top
+        position="fixed"
         sx={{
           top: 0,
-          backgroundColor: isDarkMode ? '#121212' : '#ffffff', // Toggle background based on dark mode prop
-          color: isDarkMode ? '#fff' : '#000', // Toggle text color
-          padding: { xs: '0px', md: '0 50px' }, // Padding is 0 on mobile (xs), 50px on medium (md) and larger
+          backgroundColor: isDarkMode ? '#121212' : '#ffffff',
+          color: isDarkMode ? '#fff' : '#000',
+          padding: { xs: '0px', md: '0 50px' },
           gap: '20px',
-          zIndex: 1200, // Ensure AppBar stays above other elements
+          zIndex: 1200, 
+          boxShadow:'none',
+          fontWeight:600,
         }}
       >
       <Container maxWidth="xl">
@@ -62,7 +64,6 @@ function ResponsiveAppBar({ isDarkMode, toggleTheme }) {
             Kavindu.
           </Typography>
 
-          {/* Mobile Menu Icon */}
           <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' }, justifyContent: 'flex-end' }}>
             <IconButton
               size="large"
@@ -92,8 +93,7 @@ function ResponsiveAppBar({ isDarkMode, toggleTheme }) {
             >
               {pages.map((page) => (
                 <MenuItem key={page.name} onClick={handleCloseNavMenu}>
-                  {/* Use Link inside MenuItem */}
-                  <Link to={page.path} style={{ textDecoration: 'none', color: 'inherit' }}>
+                  <Link to={page.path} style={{ textDecoration: 'none', color: 'inherit', fontWeight: '600' }}>
                     <Typography textAlign="center">{page.name}</Typography>
                   </Link>
                 </MenuItem>
@@ -101,15 +101,36 @@ function ResponsiveAppBar({ isDarkMode, toggleTheme }) {
             </Menu>
           </Box>
 
-          {/* Desktop Menu */}
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' }, justifyContent: 'flex-end' }}>
             {pages.map((page) => (
               <Button
                 key={page.name}
                 onClick={handleCloseNavMenu}
-                sx={{ my: 2, color: isDarkMode ? 'white' : 'black', display: 'block' }}
+                sx={{
+                  my: 2,
+                  color: isDarkMode ? 'white' : 'black',
+                  fontSize: { xs: '10px', sm: '12px', md: '14px', lg: '16px' },  // Increase font size based on screen size
+                  fontWeight: 700,
+                  display: 'block',
+                  position: 'relative',
+                  '&:hover': {
+                    color: '#2AD87F',
+                  },
+                  '&::after': {
+                    content: '""',
+                    position: 'absolute',
+                    width: '0%',
+                    height: '4px',
+                    left: '0',
+                    bottom: '0',
+                    backgroundColor: '#2AD87F',
+                    transition: 'width 0.3s ease-in-out',
+                  },
+                  '&:hover::after': {
+                    width: '100%',
+                  },
+                }}
               >
-                {/* Use Link inside Button */}
                 <Link to={page.path} style={{ textDecoration: 'none', color: isDarkMode ? 'white' : 'black' }}>
                   {page.name}
                 </Link>
@@ -117,9 +138,7 @@ function ResponsiveAppBar({ isDarkMode, toggleTheme }) {
             ))}
           </Box>
 
-          {/* Dark Mode Toggle */}
           <Box sx={{ flexGrow: 0, display: 'flex', alignItems: 'center', justifyContent: 'center', ml: 2 }}>
-            {/* Use your custom Toggle component */}
             <Toggle isChecked={isDarkMode} handleChange={toggleTheme} />
           </Box>
         </Toolbar>

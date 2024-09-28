@@ -3,6 +3,7 @@ import { Box, TextField, Button, Container } from '@mui/material';
 import './contact.css';
 import waveImg from '../assets/laptop wave.png';
 import emailjs from '@emailjs/browser';
+import { styled } from '@mui/material/styles';
 
 function ContactUs() {
   const [formData, setFormData] = useState({
@@ -125,14 +126,49 @@ function ContactUs() {
 
                 {/* Submit Button */}
                 <div className="container">
-                  <Button
+                  
+                <Button
                     variant="contained"
                     color="primary"
                     type="submit"
                     className={buttonState} // Dynamic button state for animations
+                    sx={{
+                      width: { xs: '120%', sm: 'auto' },
+                      height: { xs: '40px', sm: '40px', md: '60px' },
+                      backgroundColor: '#1E242B',
+                      borderRadius: '10px',
+                      borderColor: '#2AD87F',
+                      borderWidth: '2.5px',
+                      fontSize: { xs: '12px', sm: '18px', md: '20px', lg: '22px' },
+                      fontWeight: 600,
+                      color: '#2AD87F',
+                      marginBottom: '5%',
+                      padding: { xs: '6px 20px', sm: '5px 30px', md: '6px 40px' },
+                      '&:hover': {
+                        borderColor: '#ffffff',
+                        backgroundColor: '#ffffff',
+                        color: '#2AD87F',
+                        borderWidth: '4px',
+                      },
+                      '@media (max-width: 600px)': { // Mobile devices
+                        width: '100%', // Full width on small screens
+                        padding: '0.75em 1.5em', // Adjust padding
+                        fontSize: '0.875rem', // Adjust font size
+                        borderRadius: '30px',
+                        marginTop: '-5%',
+                      },
+                      '@media (min-width: 600px) and (max-width: 960px)': { // Tablet screens
+                        width: '100%', // Adjust width for medium screens
+                        padding: '0.75em 1.5em', // Adjust padding
+                        fontSize: '1rem',
+                        borderRadius: '30px',
+                        marginTop: '-5%',
+                      },
+                    }}
                   >
                     Submit
                   </Button>
+
                   
                 </div>
               </Box>
