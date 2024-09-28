@@ -14,7 +14,7 @@
 }
 .cnt-wave{
     padding: 5%;
-    width: 35%;
+    width: 40%;
 }
 .cnt-right{
     background-color: #2AD87F;
@@ -31,14 +31,52 @@
 .ctn-head{
     font-size: 2.5rem;
     margin: auto;
+    padding: 0 5%;
 }
 .ctn-subhead{
     font-size: 0.75rem;
     margin: auto;
+    padding: 0 5%;
+}
+.cnt-send{
+  width: 20px;
+  height: 20px;
+  margin-left: 5%;
+  fill: #2ad87f; /* Change the color of the icon */
+  transition: fill 0.3s ease;
+}
+.custom-svg {
+  width: 30px;
+  height: 30px;
+  fill: #1E242B; /* Change the color of the icon */
+  transition: fill 0.3s ease;
 }
 
+.custom-svg:hover {
+  fill: rgb(255, 255, 255); /* Change color on hover */
+}
 
+.social-contact{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+}
 
+.custom-svg {
+  transition: transform 0.3s ease;
+  cursor: pointer; /* Smooth transition for scaling */
+}
+
+.custom-svg:hover {
+  transform: scale(1.1);
+  border-radius: 50%;
+  border:solid 2px #2AD87F /* Scale up to 1.2 on hover */
+}
+
+.custom-svg:active {
+  transform: scale(1); /* Return to normal size when clicked */
+}
 
 
 /* Styles for medium screens (tablets) */
