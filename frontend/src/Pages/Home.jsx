@@ -31,6 +31,7 @@ import code from '../assets/code.png';
 import figma from '../assets/figma.png';
 import figma2 from '../assets/Figma.2.png';
 import link from '../assets/Link.1.png';
+import mycv from '../assets/UI_20APC4645_Kavindu Chathuranga.pdf';
 import 'animate.css';
 import { Link, useNavigate } from 'react-router-dom';
 
@@ -570,44 +571,47 @@ const Home = () => {
               <div className="abouthead">
                 <h1 className='ab-head'>About Me</h1>
                 <p className='ab-subhead'>Hello! I'm Kavindu Chathuranga, a third-year Computing and Information Systems student at Sabaragamuwa University. Passionate about full-stack development and UI/UX engineering, I strive to create impactful and intuitive digital experiences. Eager to bring my skills to the tech industry, I thrive on innovation and collaboration.</p>
-                <Button
-                  variant="outlined"
-                  sx={{
-                    width: { xs: 'auto', sm: 'auto' },
-                    height: { xs: '40px', sm: '40px', md:'60px' },
-                    backgroundColor: '#1E242B',
-                    borderRadius: '50px',
-                    borderColor: '#2AD87F',
-                    borderWidth: '2.5px',
-                    fontSize: { xs: '12px', sm: '18px', md: '20px', lg: '22px' },
-                    fontWeight: 600,
-                    color: '#2AD87F',
-                    marginBottom:'5%',
-                    padding: { xs: '10px 20px', sm: '5px 30px', md: '10px 40px' },
-                    '&:hover': {
-                      borderColor: '#1E242B',
-                      backgroundColor: '#2AD87F',
-                      color: '#1E242B',
-                      borderWidth: '4 px',
-                    },
-                    '@media (max-width: 600px)': { // Mobile devices
-                      padding: '0.75em 1.5em', // Adjust padding
-                      fontSize: '0.875rem', // Adjust font size
-                      borderRadius: '30px',
-                      marginTop:'-5%',
-                      
-                    },
+                
+                <a href={mycv} download="KavinduChathuranga_CV">
+                    <Button
+                    variant="outlined"
+                    sx={{
+                      width: { xs: 'auto', sm: 'auto' },
+                      height: { xs: '40px', sm: '40px', md:'60px' },
+                      backgroundColor: '#1E242B',
+                      borderRadius: '50px',
+                      borderColor: '#2AD87F',
+                      borderWidth: '2.5px',
+                      fontSize: { xs: '12px', sm: '18px', md: '20px', lg: '22px' },
+                      fontWeight: 600,
+                      color: '#2AD87F',
+                      marginBottom:'5%',
+                      padding: { xs: '10px 20px', sm: '5px 30px', md: '10px 40px' },
+                      '&:hover': {
+                        borderColor: '#1E242B',
+                        backgroundColor: '#2AD87F',
+                        color: '#1E242B',
+                        borderWidth: '4 px',
+                      },
+                      '@media (max-width: 600px)': { // Mobile devices
+                        padding: '0.75em 1.5em', // Adjust padding
+                        fontSize: '0.875rem', // Adjust font size
+                        borderRadius: '30px',
+                        marginTop:'-5%',
+                        
+                      },
 
-                    '@media (min-width: 600px) and (max-width: 960px)': { // Tablet screens
-                      padding: '0.75em 1.5em', // Adjust padding
-                      fontSize: '1rem',
-                      borderRadius: '30px',
-                      marginTop:'-5%',
-                    },
-                  }}
-                >
-                  Download my cV
-                </Button>
+                      '@media (min-width: 600px) and (max-width: 960px)': { // Tablet screens
+                        padding: '0.75em 1.5em', // Adjust padding
+                        fontSize: '1rem',
+                        borderRadius: '30px',
+                        marginTop:'-5%',
+                      },
+                    }}
+                  >
+                    Download my cV
+                  </Button>
+                </a>
               
               </div>
             </div>
