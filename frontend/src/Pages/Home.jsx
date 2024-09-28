@@ -29,8 +29,9 @@ import ChatWindow from '../assets/ChatWindowMockupView.png';
 import HostelMngMockup from '../assets/HostelMngMockup.png';
 import code from '../assets/code.png';
 import figma from '../assets/figma.png';
+import figma2 from '../assets/Figma.2.png';
 import 'animate.css';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 // StyledButton component definition
 
@@ -71,6 +72,7 @@ const StyledButton = styled(Button)(({ active }) => ({
 }));
 
 const projectData = {
+  
   UI: [
     {
       id: 1,
@@ -81,7 +83,9 @@ const projectData = {
       description: 'Buildmate+ is an innovative construction enablement platform designed to streamline project management.',
       image: proimage1,
       titleImg: figma,
-      githubLink: github,
+      githubLink: figma2,
+      Link1: 'https://github.com/KCDasanayaka',
+      Link2: 'https://github.com/KCDasanayaka',
       behanceLink: behance
     },
     {
@@ -93,7 +97,9 @@ const projectData = {
       description: 'DesignHub is a collaborative platform that connects designers with clients seeking creative solutions.',
       image: Tourism,
       titleImg: figma,
-      githubLink: github,
+      githubLink: figma2,
+      Link1: 'https://github.com/KCDasanayaka',
+      Link2: 'https://github.com/KCDasanayaka',
       behanceLink: behance
     },
     {
@@ -105,7 +111,9 @@ const projectData = {
       description: 'DesignHub is a collaborative platform that connects designers with clients seeking creative solutions.',
       image: TransportMng,
       titleImg: figma,
-      githubLink: github,
+      githubLink: figma2,
+      Link1: 'https://github.com/KCDasanayaka',
+      Link2: 'https://github.com/KCDasanayaka',
       behanceLink: behance
     },
     {
@@ -117,7 +125,9 @@ const projectData = {
       description: 'DesignHub is a collaborative platform that connects designers with clients seeking creative solutions.',
       image: PortFolio,
       titleImg: figma,
-      githubLink: github,
+      githubLink: figma2,
+      Link1: 'https://github.com/KCDasanayaka',
+      Link2: 'https://github.com/KCDasanayaka',
       behanceLink: behance
     },
     {
@@ -129,7 +139,9 @@ const projectData = {
       description: 'DesignHub is a collaborative platform that connects designers with clients seeking creative solutions.',
       image: Pharma,
       titleImg: figma,
-      githubLink: github,
+      githubLink: figma2,
+      Link1: 'https://github.com/KCDasanayaka',
+      Link2: 'https://github.com/KCDasanayaka',
       behanceLink: behance
     },
     {
@@ -141,7 +153,9 @@ const projectData = {
       description: 'DesignHub is a collaborative platform that connects designers with clients seeking creative solutions.',
       image: BuildMate,
       titleImg: figma,
-      githubLink: github,
+      githubLink: figma2,
+      Link1: 'https://github.com/KCDasanayaka',
+      Link2: 'https://github.com/KCDasanayaka',
       behanceLink: behance
     },
     // Add more UI projects here
@@ -163,6 +177,8 @@ const projectData = {
       id: 2,
       category: 'Coding',
       title: 'DevConnector',
+      Subtitle: 'MERN | Tailwind',
+      SubDescription:'Construction Enablement Platform',
       description: 'DevConnector allows developers to connect, share ideas, and collaborate on open-source projects.',
       image: BuildMate,
       titleImg: code,
@@ -173,6 +189,8 @@ const projectData = {
       id: 3,
       category: 'Coding',
       title: 'DevConnector',
+      Subtitle: 'React | Laravel | MySQL',
+      SubDescription:'Hostel Management System',
       description: 'DevConnector allows developers to connect, share ideas, and collaborate on open-source projects.',
       image: HostelMngMockup,
       titleImg: code,
@@ -183,6 +201,8 @@ const projectData = {
       id: 4,
       category: 'Coding',
       title: 'DevConnector',
+      Subtitle: 'React | Firebase | Tailwind',
+      SubDescription:'Public Transport Management Platform',
       description: 'DevConnector allows developers to connect, share ideas, and collaborate on open-source projects.',
       image: TransportMng,
       titleImg: code,
@@ -193,6 +213,8 @@ const projectData = {
       id: 5,
       category: 'Coding',
       title: 'DevConnector',
+      Subtitle: 'React | MaterialUI',
+      SubDescription:'Personal Portfolio Design',
       description: 'DevConnector allows developers to connect, share ideas, and collaborate on open-source projects.',
       image: PortFolio,
       titleImg: code,
@@ -225,8 +247,11 @@ const projectData = {
 };
 
 // Modify ProjectCard to accept props
-const ProjectCard = ({ title, description, image, githubLink, behanceLink,  titleImg, Subtitle, SubDescription }) => {
+const ProjectCard = ({ title, description, image, githubLink, behanceLink,  titleImg, Subtitle, SubDescription, Link1, Link2 }) => {
   const [isHovered, setIsHovered] = useState(false);
+  
+  const [hoveredGitHub, setHoveredGitHub] = useState(false);
+  const [hoveredBehance, setHoveredBehance] = useState(false);
 
   return (
     <div
@@ -242,11 +267,43 @@ const ProjectCard = ({ title, description, image, githubLink, behanceLink,  titl
       <p className='mw-detail'>{SubDescription}</p>
       <div className="hover-box">
         <div className="hover-box-content" style={{ padding: '15%' }}>
-          <h3 style={{fontSize:'1.2rem'}}>{SubDescription}</h3>
-          <p style={{ textAlign: 'justify', fontSize: '13px' }}>{description}</p>
-          <div className="mw-hoverbtn" style={{ display: 'flex', justifyContent: 'flex-end', gap: '10px' }}>
-            <img src={githubLink} alt="GitHub" style={{ width: '35px' }} />
-            <img src={behanceLink} alt="Behance" style={{ width: '35px' }} />
+          <h3 style={{fontSize:'1rem'}}>{SubDescription}</h3>
+          <h3 style={{ marginTop: '5%' }}>Live Demos</h3>
+          <div className="mw-hoverbtn" style={{ display: 'flex', justifyContent: 'center', gap: '30px' ,alignItems:'center',marginTop:'5%'}}>
+          <Link to={Link1}>
+            <img 
+              src={githubLink} 
+              alt="GitHub" 
+              style={{
+                width: '50px',
+                cursor: 'pointer',
+                borderRadius: '50%',
+                transform: hoveredGitHub ? 'scale(1.1)' : 'scale(1)',  // Hover effect for GitHub
+                boxShadow: hoveredGitHub ? '0 0px 10px rgba(0, 0, 0, 0.5)' : 'none',
+                transition: 'transform 0.3s ease',
+              }} 
+              onMouseEnter={() => setHoveredGitHub(true)}  // Trigger GitHub hover effect
+              onMouseLeave={() => setHoveredGitHub(false)} // Remove GitHub hover effect
+            />
+          </Link>
+
+          <Link to={Link2}>
+            <img 
+              src={behanceLink} 
+              alt="Behance" 
+              style={{
+                width: '50px',
+                cursor: 'pointer',
+                borderRadius: '50%',
+                transform: hoveredBehance ? 'scale(1.1)' : 'scale(1)',  // Hover effect for Behance
+                boxShadow: hoveredBehance ? '0 0px 10px rgba(0, 0, 0, 0.5)' : 'none',
+                transition: 'transform 0.3s ease',
+              }} 
+              onMouseEnter={() => setHoveredBehance(true)}  // Trigger Behance hover effect
+              onMouseLeave={() => setHoveredBehance(false)} // Remove Behance hover effect
+            />
+          </Link>
+            
           </div>
         </div>
       </div>
@@ -457,6 +514,7 @@ const Home = () => {
                       titleImg={project.titleImg}
                       githubLink={project.githubLink}
                       behanceLink={project.behanceLink}
+                      Link1={project.Link1}
                     />
                   ))}
                 </div>

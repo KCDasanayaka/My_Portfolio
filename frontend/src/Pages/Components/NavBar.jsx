@@ -11,6 +11,7 @@ import Button from '@mui/material/Button';
 import MenuItem from '@mui/material/MenuItem';
 import { Link } from 'react-router-dom';
 import { Toggle } from './DarkMood/Components/Toggle'; 
+import { useNavigate } from 'react-router-dom';
 
 const pages = [
   { name: 'Projects', path: 'projects' },     
@@ -18,7 +19,14 @@ const pages = [
   { name: 'Say Hi!', path: '/contact' } 
 ];
 
+
+
 function ResponsiveAppBar({ isDarkMode, toggleTheme }) {
+  const navigate= useNavigate();
+  function handletohome(){
+    navigate('../../')
+  }
+  
   const [anchorElNav, setAnchorElNav] = React.useState(null);
 
   const handleOpenNavMenu = (event) => {
@@ -50,6 +58,7 @@ function ResponsiveAppBar({ isDarkMode, toggleTheme }) {
             noWrap
             component="a"
             href="#"
+            onClick={handletohome}
             sx={{
               mr: 2,
               display: { xs: 'flex', md: 'flex' }, 
@@ -64,7 +73,7 @@ function ResponsiveAppBar({ isDarkMode, toggleTheme }) {
             Kavindu.
           </Typography>
 
-          <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' }, justifyContent: 'flex-end' }}>
+          <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' }, justifyContent: 'flex-end',    minWidth: '100px' }}>
             <IconButton
               size="large"
               aria-label="menu"
@@ -92,14 +101,23 @@ function ResponsiveAppBar({ isDarkMode, toggleTheme }) {
               sx={{ display: { xs: 'block', md: 'none' } }}
             >
               {pages.map((page) => (
-                <MenuItem key={page.name} onClick={handleCloseNavMenu}>
-                  <Link to={page.path} style={{ textDecoration: 'none', color: 'inherit', fontWeight: '600' }}>
+                <MenuItem 
+                  key={page.name} 
+                  onClick={handleCloseNavMenu}
+                  sx={{ ml: 5 }}  // Add margin-left
+                >
+                  <Link 
+                    to={page.path} 
+                    style={{ textDecoration: 'none', color: 'inherit', fontWeight: '600' }}  // Style Link element
+                  >
                     <Typography textAlign="center">{page.name}</Typography>
                   </Link>
                 </MenuItem>
               ))}
+
             </Menu>
           </Box>
+
 
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' }, justifyContent: 'flex-end' }}>
             {pages.map((page) => (
