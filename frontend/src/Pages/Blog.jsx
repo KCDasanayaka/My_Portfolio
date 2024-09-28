@@ -4,6 +4,7 @@ import './blog.css';
 import blogimg1 from '../assets/Blog1.png';
 import blogimg2 from '../assets/Blog2.png';
 import figma from '../assets/tool.png';
+import blog from '../assets/blog.3.png';
 
 const Blog = () => {
   return (
@@ -20,24 +21,24 @@ const Blog = () => {
             <div className="bgbox">
             <div className='bg-box1'>
                 <img src={blogimg1} alt='Project' className='bgImage1' />
-                <div className="mw-protop" style={{margin:'5% 0 0 0'}}>
-                  <div className="mw-fimgabox">
-                    <img src={figma} alt='Figma' className='mw-figma' />
+                <div className="bg-title" style={{margin:'2% 0 0 0', paddingLeft:'5%'}}>
+                  <div className="bg-protop" >
+                      <img src={blog} alt='Figma' className='bg-figma' />
+                    <h3 style={{margin:'auto'}}>React UI/UX Essentials</h3>
                   </div>
-                  <h3 style={{margin:'auto'}}> Case Study</h3>
+                  <p className='mw-detail' style={{margin:'0'}}>Creating Dark mode and Light mode in react</p>
                 </div>
-                <p className='mw-detail'>Coding Enablement Platform</p>
                 
               </div>
               <div className='bg-box1'>
                 <img src={blogimg2} alt='Project' className='bgImage1' />
-                <div className="mw-protop" style={{margin:'5% 0 0 0'}}>
-                  <div className="mw-fimgabox">
-                    <img src={figma} alt='Figma' className='mw-figma' />
+                <div className="bg-title" style={{margin:'2% 0 0 0', paddingLeft:'5%'}}>
+                  <div className="bg-protop" >
+                      <img src={blog} alt='Figma' className='bg-figma' />
+                    <h3 style={{margin:'auto'}}>Modern UI/UX Design </h3>
                   </div>
-                  <h3 style={{margin:'auto'}}> Case Study</h3>
+                  <p className='bg-subtopic' style={{margin:'0'}}>How Figma elevates UI?UX in modern web development</p>
                 </div>
-                <p className='mw-detail'>Coding Enablement Platform</p>
                 
               </div>
             </div>

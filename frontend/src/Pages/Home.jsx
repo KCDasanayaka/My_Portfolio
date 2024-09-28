@@ -30,6 +30,7 @@ import HostelMngMockup from '../assets/HostelMngMockup.png';
 import code from '../assets/code.png';
 import figma from '../assets/figma.png';
 import figma2 from '../assets/Figma.2.png';
+import link from '../assets/Link.1.png';
 import 'animate.css';
 import { Link, useNavigate } from 'react-router-dom';
 
@@ -171,7 +172,7 @@ const projectData = {
       image: ChatWindow,
       titleImg: code,
       githubLink: github,
-      behanceLink: behance
+      behanceLink: link
     },
     {
       id: 2,

@@ -133,13 +133,13 @@ function ContactUs() {
                     type="submit"
                     className={buttonState} // Dynamic button state for animations
                     sx={{
-                      width: { xs: '120%', sm: 'auto' },
+                      width: { xs: '120%', sm: '100%' },
                       height: { xs: '40px', sm: '40px', md: '60px' },
                       backgroundColor: '#1E242B',
                       borderRadius: '10px',
                       borderColor: '#2AD87F',
                       borderWidth: '2.5px',
-                      fontSize: { xs: '12px', sm: '18px', md: '20px', lg: '22px' },
+                      fontSize: { xs: '12px', sm: '18px', md: '20px', lg: '20px' },
                       fontWeight: 600,
                       color: '#2AD87F',
                       marginBottom: '5%',
@@ -154,15 +154,11 @@ function ContactUs() {
                         width: '100%', // Full width on small screens
                         padding: '0.75em 1.5em', // Adjust padding
                         fontSize: '0.875rem', // Adjust font size
-                        borderRadius: '30px',
-                        marginTop: '-5%',
                       },
                       '@media (min-width: 600px) and (max-width: 960px)': { // Tablet screens
                         width: '100%', // Adjust width for medium screens
                         padding: '0.75em 1.5em', // Adjust padding
                         fontSize: '1rem',
-                        borderRadius: '30px',
-                        marginTop: '-5%',
                       },
                     }}
                   >

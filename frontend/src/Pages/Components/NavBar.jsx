@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
@@ -9,24 +9,20 @@ import MenuIcon from '@mui/icons-material/Menu';
 import Container from '@mui/material/Container';
 import Button from '@mui/material/Button';
 import MenuItem from '@mui/material/MenuItem';
-import { Link } from 'react-router-dom';
-import { Toggle } from './DarkMood/Components/Toggle'; 
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate, useLocation } from 'react-router-dom';  // Import useLocation for current route
+import { Link as ScrollLink, scroller } from "react-scroll";        // Import scroller from react-scroll
+import { Toggle } from './DarkMood/Components/Toggle';
 
 const pages = [
-  { name: 'Projects', path: 'projects' },     
-  { name: 'Blogs', path: '/blog' },    
-  { name: 'Say Hi!', path: '/contact' } 
+  { name: 'Projects', path: 'projects' },    // Just the section name (for scrolling)
+  { name: 'Blogs', path: '/blog' },          // External page
+  { name: 'Say Hi!', path: '/contact' }      // External page
 ];
 
-
-
 function ResponsiveAppBar({ isDarkMode, toggleTheme }) {
-  const navigate= useNavigate();
-  function handletohome(){
-    navigate('../../')
-  }
-  
+  const navigate = useNavigate();
+  const location = useLocation();  // To get current URL path
+
   const [anchorElNav, setAnchorElNav] = React.useState(null);
 
   const handleOpenNavMenu = (event) => {
@@ -37,20 +33,42 @@ function ResponsiveAppBar({ isDarkMode, toggleTheme }) {
     setAnchorElNav(null);
   };
 
+  const handleScrollToProjects = () => {
+    if (location.pathname !== '/') {
+      // If not on the home page, navigate to the home page first
+      navigate('/');
+      setTimeout(() => {
+        scroller.scrollTo('projects', {
+          smooth: true,
+          duration: 500,
+          offset: -70, // Adjust based on your fixed header height
+        });
+      }, 100); // Short delay to ensure the home page has loaded
+    } else {
+      // If already on the home page, just scroll to projects section
+      scroller.scrollTo('projects', {
+        smooth: true,
+        duration: 500,
+        offset: -70,
+      });
+    }
+    handleCloseNavMenu();  // Close the nav menu after click
+  };
+
   return (
     <AppBar
-        position="fixed"
-        sx={{
-          top: 0,
-          backgroundColor: isDarkMode ? '#121212' : '#ffffff',
-          color: isDarkMode ? '#fff' : '#000',
-          padding: { xs: '0px', md: '0 50px' },
-          gap: '20px',
-          zIndex: 1200, 
-          boxShadow:'none',
-          fontWeight:600,
-        }}
-      >
+      position="fixed"
+      sx={{
+        top: 0,
+        backgroundColor: isDarkMode ? '#121212' : '#ffffff',
+        color: isDarkMode ? '#fff' : '#000',
+        padding: { xs: '0px', md: '0 50px' },
+        gap: '20px',
+        zIndex: 1200,
+        boxShadow: 'none',
+        fontWeight: 600,
+      }}
+    >
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           <Typography
@@ -58,10 +76,10 @@ function ResponsiveAppBar({ isDarkMode, toggleTheme }) {
             noWrap
             component="a"
             href="#"
-            onClick={handletohome}
+            onClick={() => navigate('/')}
             sx={{
               mr: 2,
-              display: { xs: 'flex', md: 'flex' }, 
+              display: { xs: 'flex', md: 'flex' },
               fontFamily: 'Poppins',
               fontWeight: 700,
               letterSpacing: '.1rem',
@@ -73,7 +91,7 @@ function ResponsiveAppBar({ isDarkMode, toggleTheme }) {
             Kavindu.
           </Typography>
 
-          <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' }, justifyContent: 'flex-end',    minWidth: '100px' }}>
+          <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' }, justifyContent: 'flex-end', minWidth: '100px' }}>
             <IconButton
               size="large"
               aria-label="menu"
@@ -100,60 +118,97 @@ function ResponsiveAppBar({ isDarkMode, toggleTheme }) {
               onClose={handleCloseNavMenu}
               sx={{ display: { xs: 'block', md: 'none' } }}
             >
-              {pages.map((page) => (
-                <MenuItem 
-                  key={page.name} 
-                  onClick={handleCloseNavMenu}
-                  sx={{ ml: 5 }}  // Add margin-left
-                >
-                  <Link 
-                    to={page.path} 
-                    style={{ textDecoration: 'none', color: 'inherit', fontWeight: '600' }}  // Style Link element
-                  >
+              {pages.map((page) =>
+                page.path === 'projects' ? (
+                  <MenuItem key={page.name} onClick={handleScrollToProjects} sx={{ ml: 5 }}>
                     <Typography textAlign="center">{page.name}</Typography>
-                  </Link>
-                </MenuItem>
-              ))}
-
+                  </MenuItem>
+                ) : (
+                  <MenuItem key={page.name} onClick={handleCloseNavMenu} sx={{ ml: 5 }}>
+                    <Link
+                      to={page.path}
+                      style={{ textDecoration: 'none', color: 'inherit', fontWeight: '600' }}
+                    >
+                      <Typography textAlign="center">{page.name}</Typography>
+                    </Link>
+                  </MenuItem>
+                )
+              )}
             </Menu>
           </Box>
 
-
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' }, justifyContent: 'flex-end' }}>
-            {pages.map((page) => (
-              <Button
-                key={page.name}
-                onClick={handleCloseNavMenu}
-                sx={{
-                  my: 2,
-                  color: isDarkMode ? 'white' : 'black',
-                  fontSize: { xs: '10px', sm: '12px', md: '14px', lg: '16px' },  // Increase font size based on screen size
-                  fontWeight: 700,
-                  display: 'block',
-                  position: 'relative',
-                  '&:hover': {
-                    color: '#2AD87F',
-                  },
-                  '&::after': {
-                    content: '""',
-                    position: 'absolute',
-                    width: '0%',
-                    height: '4px',
-                    left: '0',
-                    bottom: '0',
-                    backgroundColor: '#2AD87F',
-                    transition: 'width 0.3s ease-in-out',
-                  },
-                  '&:hover::after': {
-                    width: '100%',
-                  },
-                }}
-              >
-                <Link to={page.path} style={{ textDecoration: 'none', color: isDarkMode ? 'white' : 'black' }}>
+            {pages.map((page) =>
+              page.path === 'projects' ? (
+                <Button
+                  key={page.name}
+                  onClick={handleScrollToProjects}
+                  sx={{
+                    my: 2,
+                    mx:1.5,
+                    color: isDarkMode ? 'white' : 'black',
+                    fontSize: { xs: '10px', sm: '12px', md: '14px', lg: '16px' },  // Increase font size based on screen size
+                    fontWeight: 700,
+                    display: 'block',
+                    position: 'relative',
+                    '&:hover': {
+                      color: '#2AD87F',
+                    },
+                    '&::after': {
+                      content: '""',
+                      position: 'absolute',
+                      width: '0%',
+                      height: '4px',
+                      left: '0',
+                      bottom: '0',
+                      backgroundColor: '#2AD87F',
+                      transition: 'width 0.3s ease-in-out',
+                    },
+                    '&:hover::after': {
+                      width: '100%',
+                    },
+                  }}
+                >
                   {page.name}
-                </Link>
-              </Button>
-            ))}
+                </Button>
+              ) : (
+                <Button
+                  key={page.name}
+                  sx={{
+                    my: 2,
+                    mx:1.5,
+                    color: isDarkMode ? 'white' : 'black',
+                    fontSize: { xs: '10px', sm: '12px', md: '14px', lg: '16px' },  // Increase font size based on screen size
+                    fontWeight: 700,
+                    display: 'block',
+                    position: 'relative',
+                    '&:hover': {
+                      color: '#2AD87F',
+                    },
+                    '&::after': {
+                      content: '""',
+                      position: 'absolute',
+                      width: '0%',
+                      height: '4px',
+                      left: '0',
+                      bottom: '0',
+                      backgroundColor: '#2AD87F',
+                      transition: 'width 0.3s ease-in-out',
+                    },
+                    '&:hover::after': {
+                      width: '100%',
+                    },
+                  }}
+                >
+                  <Link
+                    to={page.path}
+                    style={{ textDecoration: 'none', color: isDarkMode ? 'white' : 'black' }}
+                  >
+                    {page.name}
+                  </Link>
+                </Button>
+              )
+            )}
           </Box>
 
           <Box sx={{ flexGrow: 0, display: 'flex', alignItems: 'center', justifyContent: 'center', ml: 2 }}>
