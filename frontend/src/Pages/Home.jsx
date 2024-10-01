@@ -86,8 +86,8 @@ const projectData = {
       image: proimage1,
       titleImg: figma,
       githubLink: figma2,
-      Link1: 'https://github.com/KCDasanayaka',
-      Link2: 'https://github.com/KCDasanayaka',
+      Link1: 'https://www.figma.com/proto/ccaAO6hGU5cMsYwYzZBnSd/Untitled?page-id=3%3A4&node-id=3-8&starting-point-node-id=35%3A104&t=DmEB4vwfqbEqjESN-1',
+      Link2: 'https://www.behance.net/gallery/206162151/Pizza-ordering-Mobile-App-Design-Figma-Template',
       behanceLink: behance
     },
     {
@@ -100,7 +100,7 @@ const projectData = {
       image: Tourism,
       titleImg: figma,
       githubLink: figma2,
-      Link1: 'https://github.com/KCDasanayaka',
+      Link1: 'https://www.figma.com/proto/xFSKmdnR8GDVw0an7OkTNv/Pixel-Pioneers?page-id=4%3A2&node-id=129-153&node-type=frame&viewport=495%2C239%2C0.1&t=QwkX2xLQ3qASQn6q-1&scaling=min-zoom&content-scaling=fixed&starting-point-node-id=129%3A153',
       Link2: 'https://github.com/KCDasanayaka',
       behanceLink: behance
     },
@@ -114,7 +114,7 @@ const projectData = {
       image: TransportMng,
       titleImg: figma,
       githubLink: figma2,
-      Link1: 'https://github.com/KCDasanayaka',
+      Link1: 'https://www.figma.com/proto/Xb28kCx0SSeSD6hPbKq5HM/Untitled?page-id=0%3A1&node-id=141-23&node-type=frame&viewport=3268%2C-3669%2C0.89&t=BmkFCWNtHnhZygIe-1&scaling=scale-down&content-scaling=fixed',
       Link2: 'https://github.com/KCDasanayaka',
       behanceLink: behance
     },
@@ -128,8 +128,8 @@ const projectData = {
       image: PortFolio,
       titleImg: figma,
       githubLink: figma2,
-      Link1: 'https://github.com/KCDasanayaka',
-      Link2: 'https://github.com/KCDasanayaka',
+      Link1: 'https://www.figma.com/proto/K5NtqALbLhOTDnqUL1aCwY/Untitled?page-id=0%3A1&node-id=54-61&node-type=frame&viewport=851%2C402%2C0.07&t=ya8GzjEhWpicWa48-1&scaling=scale-down&content-scaling=fixed',
+      Link2: 'https://www.behance.net/gallery/208481691/Personal-Portfolio-Page',
       behanceLink: behance
     },
     {
@@ -142,7 +142,7 @@ const projectData = {
       image: Pharma,
       titleImg: figma,
       githubLink: figma2,
-      Link1: 'https://github.com/KCDasanayaka',
+      Link1: 'https://www.figma.com/proto/dgkexxjmRaHq62ammRQvd4/IS3109-Group-01-Chemical-Industry?page-id=201%3A62&node-id=652-1755&starting-point-node-id=652%3A1755&t=FRFcZf5nPr4OBIg3-1',
       Link2: 'https://github.com/KCDasanayaka',
       behanceLink: behance
     },
@@ -156,7 +156,7 @@ const projectData = {
       image: BuildMate,
       titleImg: figma,
       githubLink: figma2,
-      Link1: 'https://github.com/KCDasanayaka',
+      Link1: 'https://www.figma.com/proto/YBUjUiWHqvipnZHdMsFweW/BuildMate%2B?page-id=75%3A17&node-id=88-112&node-type=frame&viewport=1147%2C656%2C0.24&t=bbNTcTLPR8fH06oR-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=88%3A112',
       Link2: 'https://github.com/KCDasanayaka',
       behanceLink: behance
     },
@@ -272,7 +272,10 @@ const ProjectCard = ({ title, description, image, githubLink, behanceLink,  titl
           <h3 style={{fontSize:'1rem'}}>{SubDescription}</h3>
           <h3 style={{ marginTop: '5%' }}>Live Demos</h3>
           <div className="mw-hoverbtn" style={{ display: 'flex', justifyContent: 'center', gap: '30px' ,alignItems:'center',marginTop:'5%'}}>
-          <Link to={Link1}>
+          <Link to={Link1} 
+           target="_blank"
+           rel="noopener noreferrer"
+          >
             <img 
               src={githubLink} 
               alt="GitHub" 
@@ -289,7 +292,10 @@ const ProjectCard = ({ title, description, image, githubLink, behanceLink,  titl
             />
           </Link>
 
-          <Link to={Link2}>
+          <Link to={Link2}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <img 
               src={behanceLink} 
               alt="Behance" 
