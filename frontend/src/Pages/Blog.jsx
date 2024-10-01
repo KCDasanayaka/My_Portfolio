@@ -21,28 +21,29 @@ const Blog = () => {
             <p className='bg-subhead'>Read my latest articles</p>
             <div className="bgbox">
             <div className='bg-box1'>
-                <Link
-                  to={"https://kavindu.hashnode.dev/how-to-implement-dark-mode-and-light-mode-in-react"}
-                  target="_blank" // Opens the link in a new tab
-                  rel="noopener noreferrer"
-                  style={{textDecration:'none'}} // Improves security for external links
-                >
-                  <img src={blogimg1} alt='Project' className='bgImage1' />
-                  <div className="bg-title" style={{ margin: '2% 0 0 0', paddingLeft: '5%' }}>
-                    <div className="bg-protop">
-                      <img src={blog} alt='Figma' className='bg-figma' />
-                      <h3 style={{ margin: 'auto', textDecration:'none'}}>React UI/UX Essentials</h3>
-                    </div>
-                    <p className='mw-detail' style={{ margin: '0' }}>
-                      Creating Dark mode and Light mode in React
-                    </p>
+              <Link
+                to={"https://kavindu.hashnode.dev/how-to-implement-dark-mode-and-light-mode-in-react"}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="blog-link" // Add className here
+              >
+                <img src={blogimg1} alt='Project' className='bgImage1' />
+                <div className="bg-title" style={{ margin: '2% 0 0 0', paddingLeft: '5%' }}>
+                  <div className="bg-protop">
+                    <img src={blog} alt='Figma' className='bg-figma' />
+                    <h3 style={{ margin: 'auto' }}>React UI/UX Essentials</h3>
                   </div>
-                </Link>
-              </div>
+                  <p className='mw-detail' style={{ margin: '0' }}>
+                    Creating Dark mode and Light mode in React
+                  </p>
+                </div>
+              </Link>
+            </div>
               <div className='bg-box1'>
                 <Link to={"https://kavindu.hashnode.dev/how-figma-elevates-uxui-in-modern-web-development"}
-                target="_blank" // Opens the link in a new tab
-                rel="noopener noreferrer" // Improves security for external links
+                target="_blank"
+                rel="noopener noreferrer"
+                className="blog-link" // Add className here
               >
                   <img src={blogimg2} alt='Project' className='bgImage1' />
                   <div className="bg-title" style={{margin:'2% 0 0 0', paddingLeft:'5%'}}>

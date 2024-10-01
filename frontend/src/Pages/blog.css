@@ -51,7 +51,15 @@
     cursor: pointer;
     transform: scale(1.05);
   }
-
+  .blog-link {
+    text-decoration: none; /* Removes underline from the link */
+    color: inherit; /* Inherit the text color from parent */
+  }
+  
+  .blog-link:hover {
+    text-decoration: none; /* Ensures no underline on hover */
+  }
+  
   .bgImage1 {
     width: 100%;
     height: auto;
