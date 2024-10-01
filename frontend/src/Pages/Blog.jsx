@@ -5,6 +5,7 @@ import blogimg1 from '../assets/Blog1.png';
 import blogimg2 from '../assets/Blog2.png';
 import figma from '../assets/tool.png';
 import blog from '../assets/blog.3.png';
+import { Link } from 'react-router-dom';
 
 const Blog = () => {
   return (
@@ -20,14 +21,17 @@ const Blog = () => {
             <p className='bg-subhead'>Read my latest articles</p>
             <div className="bgbox">
             <div className='bg-box1'>
+              <Link to={"https://kavindu.hashnode.dev/how-to-implement-dark-mode-and-light-mode-in-react"}>
                 <img src={blogimg1} alt='Project' className='bgImage1' />
-                <div className="bg-title" style={{margin:'2% 0 0 0', paddingLeft:'5%'}}>
-                  <div className="bg-protop" >
-                      <img src={blog} alt='Figma' className='bg-figma' />
-                    <h3 style={{margin:'auto'}}>React UI/UX Essentials</h3>
+                  <div className="bg-title" style={{margin:'2% 0 0 0', paddingLeft:'5%'}}>
+                    <div className="bg-protop" >
+                        <img src={blog} alt='Figma' className='bg-figma' />
+                      <h3 style={{margin:'auto'}}>React UI/UX Essentials</h3>
+                    </div>
+                    <p className='mw-detail' style={{margin:'0'}}>Creating Dark mode and Light mode in react</p>
                   </div>
-                  <p className='mw-detail' style={{margin:'0'}}>Creating Dark mode and Light mode in react</p>
-                </div>
+              </Link>
+                
                 
               </div>
               <div className='bg-box1'>
