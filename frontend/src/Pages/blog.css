@@ -45,6 +45,11 @@
     overflow: hidden;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.8), 0 1px 10px rgba(0, 0, 0, 0.4);
     margin-bottom: 3%;
+    transition: transform 0.3s ease;;
+  }
+  .bg-box1:hover{
+    cursor: pointer;
+    transform: scale(1.05);
   }
 
   .bgImage1 {

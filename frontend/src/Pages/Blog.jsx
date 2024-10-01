@@ -35,14 +35,17 @@ const Blog = () => {
                 
               </div>
               <div className='bg-box1'>
-                <img src={blogimg2} alt='Project' className='bgImage1' />
-                <div className="bg-title" style={{margin:'2% 0 0 0', paddingLeft:'5%'}}>
-                  <div className="bg-protop" >
-                      <img src={blog} alt='Figma' className='bg-figma' />
-                    <h3 style={{margin:'auto'}}>Modern UI/UX Design </h3>
+                <Link to={"https://kavindu.hashnode.dev/how-figma-elevates-uxui-in-modern-web-development"}>
+                  <img src={blogimg2} alt='Project' className='bgImage1' />
+                  <div className="bg-title" style={{margin:'2% 0 0 0', paddingLeft:'5%'}}>
+                    <div className="bg-protop" >
+                        <img src={blog} alt='Figma' className='bg-figma' />
+                      <h3 style={{margin:'auto'}}>Modern UI/UX Design </h3>
+                    </div>
+                    <p className='bg-subtopic' style={{margin:'0'}}>How Figma elevates UI?UX in modern web development</p>
                   </div>
-                  <p className='bg-subtopic' style={{margin:'0'}}>How Figma elevates UI?UX in modern web development</p>
-                </div>
+                </Link>
+                
                 
               </div>
             </div>
