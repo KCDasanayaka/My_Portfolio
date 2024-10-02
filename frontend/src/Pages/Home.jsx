@@ -61,7 +61,7 @@ const StyledButton = styled(Button)(({ active }) => ({
   '@media (max-width: 600px)': { // Mobile devices
     width: '100%', // Full width on small screens
     padding: '0.75em 1.5em', // Adjust padding
-    fontSize: '0.875rem', // Adjust font size
+    fontSize: '0.7rem', // Adjust font size
     borderRadius: '30px',
   },
 
@@ -338,7 +338,7 @@ const Home = () => {
   }
 
   function linkedinAcc() {
-    window.location.href = 'https://www.linkedin.com/in/kavindu-dasanayaka-6a67352';
+    window.location.href = 'https://www.linkedin.com/in/kavindu-dasanayaka-6a6735285';
   }
 
   const aboutSection = () => {
