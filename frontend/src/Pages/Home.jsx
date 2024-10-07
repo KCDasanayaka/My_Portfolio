@@ -32,6 +32,11 @@ import figma from '../assets/figma.png';
 import figma2 from '../assets/Figma.2.png';
 import link from '../assets/Link.1.png';
 import mycv from '../assets/UI_20APC4645_Kavindu Chathuranga.pdf';
+import ttcover from '../assets/Tabel-Tennis.png';
+import vEditing from '../assets/vEditing.png'
+import magazine from '../assets/Magazine.png'
+import infobash from '../assets/Infobash.png'
+import pini1 from '../assets/Pini-1.png'
 import 'animate.css';
 import { Link, useNavigate } from 'react-router-dom';
 
@@ -230,17 +235,47 @@ const projectData = {
       id: 1,
       category: 'Designing',
       title: 'BrandWave',
+      Subtitle: 'Intro Video',
+      SubDescription:'South Asian Youth Table Tennis Championship 2024',
       description: 'BrandWave is a branding platform that provides tools for creating stunning visual identities.',
-      image: proimage1,
-      githubLink: github,
+      image: ttcover,
+      titleImg: vEditing,
+      githubLink: vEditing,
       behanceLink: behance
     },
     {
       id: 2,
       category: 'Designing',
       title: 'CreativeStudio',
+      Subtitle: 'Magazine Reveal Video',
+      SubDescription:'ComSpective Volume 4 - Faculty of Computing',
       description: 'CreativeStudio is a design toolkit for freelance designers to create custom design solutions.',
-      image: proimage1,
+      image: magazine,
+      titleImg: vEditing,
+      githubLink: github,
+      behanceLink: behance
+    },
+    {
+      id: 3,
+      category: 'Designing',
+      title: 'CreativeStudio',
+      Subtitle: 'Intro Video',
+      SubDescription:'Annual Cricket Trounament-Faculty of Computing',
+      description: 'CreativeStudio is a design toolkit for freelance designers to create custom design solutions.',
+      image: infobash,
+      titleImg: vEditing,
+      githubLink: github,
+      behanceLink: behance
+    },
+    {
+      id: 4,
+      category: 'Designing',
+      title: 'CreativeStudio',
+      Subtitle: 'Intro Video',
+      SubDescription:'"පිරිහිඹිනි දියවර-2024" Main Cultural Events Series',
+      description: 'CreativeStudio is a design toolkit for freelance designers to create custom design solutions.',
+      image: pini1,
+      titleImg: vEditing,
       githubLink: github,
       behanceLink: behance
     },
@@ -266,7 +301,7 @@ const ProjectCard = ({ title, description, image, githubLink, behanceLink,  titl
         <img src={titleImg} alt=' '/>
         <h3 style={{ margin: 'auto' }}>{Subtitle}</h3>
       </div>
-      <p className='mw-detail'>{SubDescription}</p>
+      <p className='mw-detail' style={{marginTop:'3%'}}>{SubDescription}</p>
       <div className="hover-box">
         <div className="hover-box-content" style={{ padding: '15%' }}>
           <h3 style={{fontSize:'1rem'}}>{SubDescription}</h3>
@@ -552,8 +587,11 @@ const Home = () => {
                     <ProjectCard
                       key={project.id}
                       title={project.title}
+                      Subtitle={project.Subtitle}
+                      SubDescription={project.SubDescription}
                       description={project.description}
                       image={project.image}
+                      titleImg={project.titleImg}
                       githubLink={project.githubLink}
                       behanceLink={project.behanceLink}
                     />
