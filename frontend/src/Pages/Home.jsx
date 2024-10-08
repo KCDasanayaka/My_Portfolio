@@ -477,6 +477,7 @@ const Home = () => {
                     color: '#2AD87F',
                     marginBottom:'5%',
                     padding: { xs: '10px 20px', sm: '5px 30px', md: '10px 40px' },
+                    animation: 'heartbeat 1.5s ease-in-out infinite',  // Add this line
                     '&:hover': {
                       borderColor: '#1E242B',
                       backgroundColor: '#2AD87F',
