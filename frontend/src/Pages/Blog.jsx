@@ -4,6 +4,7 @@ import './blog.css';
 import blogimg1 from '../assets/Blog1.png';
 import blogimg2 from '../assets/Blog2.png';
 import figma from '../assets/tool.png';
+import blog3 from '../assets/blog-3.png'
 import blog from '../assets/blog.3.png';
 import { Link } from 'react-router-dom';
 
@@ -22,21 +23,71 @@ const Blog = () => {
             <div className="bgbox">
             <div className='bg-box1'>
               <Link
+                to={"https://kavindu.hashnode.dev/the-60-30-10-rule-in-ui-design"}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="blog-link" // Add className here
+              >
+                <img src={blog3} alt='Project' className='bgImage1' />
+                <div className='bg-title-container'>
+                  <div className="bg-title" style={{ margin: '0', }}>
+                    <img src={blog} alt='Figma' className='bg-figma' />
+                    <div className="bg-protop">
+                      <h3 className='bg-topic1' style={{ margin: '0'}}>UI/UX Design Rules</h3>
+                      <p className='bg-subtopic' style={{ margin: '0' }}>
+                        60-30-10 Rule
+                      </p>
+                    </div>
+                    
+                  </div>
+                </div>
+                
+              </Link>
+            </div>
+            <div className='bg-box1'>
+              <Link
                 to={"https://kavindu.hashnode.dev/how-to-implement-dark-mode-and-light-mode-in-react"}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="blog-link" // Add className here
               >
                 <img src={blogimg1} alt='Project' className='bgImage1' />
-                <div className="bg-title" style={{ margin: '2% 0 0 0', paddingLeft: '5%' }}>
-                  <div className="bg-protop">
+                <div className='bg-title-container'>
+                  <div className="bg-title" style={{ margin: '0', }}>
                     <img src={blog} alt='Figma' className='bg-figma' />
-                    <h3 style={{ margin: 'auto' }}>React UI/UX Essentials</h3>
+                    <div className="bg-protop">
+                      <h3 className='bg-topic1' style={{ margin: '0'}}>React UI/UX Essentials</h3>
+                      <p className='bg-subtopic' style={{ margin: '0' }}>
+                        Creating Dark mode and Light mode in React
+                      </p>
+                    </div>
+                    
                   </div>
-                  <p className='mw-detail' style={{ margin: '0' }}>
-                    Creating Dark mode and Light mode in React
-                  </p>
                 </div>
+                
+              </Link>
+            </div>
+            <div className='bg-box1'>
+              <Link
+                to={"https://kavindu.hashnode.dev/how-to-implement-dark-mode-and-light-mode-in-react"}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="blog-link" // Add className here
+              >
+                <img src={blogimg2} alt='Project' className='bgImage1' />
+                <div className='bg-title-container'>
+                  <div className="bg-title" style={{ margin: '0', }}><img src={blog} alt='Figma' className='bg-figma' />
+                    <div className="bg-protop">
+                      
+                      <h3 className='bg-topic1' style={{ margin: '0'}}>Modern UI/UX Design</h3>
+                      <p className='bg-subtopic' style={{ margin: '0' }}>
+                      How Figma elevates UI/UX in modern web
+                      </p>
+                    </div>
+                    
+                  </div>
+                </div>
+                
               </Link>
             </div>
               <div className='bg-box1'>
@@ -47,11 +98,12 @@ const Blog = () => {
               >
                   <img src={blogimg2} alt='Project' className='bgImage1' />
                   <div className="bg-title" style={{margin:'2% 0 0 0', paddingLeft:'5%'}}>
+                    <img src={blog} alt='Figma' className='bg-figma' />
                     <div className="bg-protop" >
-                        <img src={blog} alt='Figma' className='bg-figma' />
-                      <h3 style={{margin:'auto'}}>Modern UI/UX Design </h3>
+                      <h3 className='bg-topic1' style={{margin:'auto'}}>Modern UI/UX Design </h3>  
+                      <p className='bg-subtopic' style={{margin:'0'}}>How Figma elevates UI?UX in modern web development</p>
                     </div>
-                    <p className='bg-subtopic' style={{margin:'0'}}>How Figma elevates UI?UX in modern web development</p>
+                    
                   </div>
                 </Link>
                 

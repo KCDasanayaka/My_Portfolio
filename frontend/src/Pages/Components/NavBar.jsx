@@ -120,11 +120,11 @@ function ResponsiveAppBar({ isDarkMode, toggleTheme }) {
             >
               {pages.map((page) =>
                 page.path === 'projects' ? (
-                  <MenuItem key={page.name} onClick={handleScrollToProjects} sx={{ ml: 5 }}>
+                  <MenuItem key={page.name} onClick={handleScrollToProjects} sx={{ ml: 1 }}>
                     <Typography textAlign="center">{page.name}</Typography>
                   </MenuItem>
                 ) : (
-                  <MenuItem key={page.name} onClick={handleCloseNavMenu} sx={{ ml: 5 }}>
+                  <MenuItem key={page.name} onClick={handleCloseNavMenu} sx={{ ml: 1 }}>
                     <Link
                       to={page.path}
                       style={{ textDecoration: 'none', color: 'inherit', fontWeight: '600' }}

@@ -3,6 +3,7 @@
     width: 100%;
     margin-top: 2%;
     margin-bottom: 5%;
+    min-height: 100vh;
 }
 .blogSection{
 }
@@ -66,21 +67,28 @@
     max-width: 780px;
     border-radius: 20px;
   }
-
-.bg-title{
+.bg-title-container{
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    width: 100%;
+}
+.bg-title{
+    display: flex;
+    flex-direction: row;
+    align-items:center;
     max-width: 780px;
     width: 100%;
+    gap: 2%;
 }
 .bg-subtopic{
   font-size: 1rem;
   font-weight: 450;
+  text-align: left;
+  margin-top: -1%;
   color: #000000;
 }
 .bg-figma{
-    max-width: 30px;
+    max-width: 35px;
 }
 .custom-shape-divider-top-1726775091 {
     position: absolute;
@@ -92,12 +100,13 @@
 }
 .bg-protop{
     display: flex;
-    flex-direction: row;
-    align-items: center;
+    flex-direction: column;
+    align-items: flex-start;
     justify-content: center;
-    gap: 10px;
 }
-
+.bg-topic1{
+    font-size: 1.5rem;
+}
 .custom-shape-divider-top-1726775091 svg {
     position: relative;
     display: block;
@@ -121,6 +130,7 @@
     .bg-box1{
         max-width: 60%;
     }
+
 }
 
 /** For mobile devices **/
@@ -134,24 +144,32 @@
     }
 
     .bg-box1{
-        max-width: 60%;
+        max-width: 70%;
+        margin-bottom: 5%;
     }
     .bg-head{
         font-size: 3rem;
     }
     .bg-subhead{
         font-size: 1rem;
+        margin-bottom: 20px;
+        
     }
     .bg-title{
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
         align-items: center;
-        padding: 2%;
     }
     .bg-subtopic{
-        font-size: 0.7rem;
+        font-size: 0.6rem;
     }
     .bg-figma{
         width: 25px;
+    }
+    .bg-topic1{
+        font-size: 0.9rem;
+    }
+    .bg-figma{
+        max-width: 25px;
     }
 }

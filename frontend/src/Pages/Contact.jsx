@@ -66,8 +66,8 @@ function ContactUs() {
                 sx={{
                   display: 'flex',
                   flexDirection: 'column',
-                  gap: 2,
-                  p: 2,
+                  gap: 1,
+                  p: { xs: [1, 8], sm: [1, 2] },
                   color: 'white',
                 }}
               >

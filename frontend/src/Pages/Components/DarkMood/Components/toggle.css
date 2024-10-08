@@ -14,7 +14,7 @@
   z-index: 100;
   border-radius: 20px;     /* Space around the text */
   cursor: pointer;        /* Pointer cursor on hover */
-  font-size: 28px;        /* Larger font size for visibility */
+  font-size: 32px;        /* Larger font size for visibility */
   display: flex;
   justify-content: center;
   align-items: center;   /* Space between the label and checkbox */
@@ -27,7 +27,6 @@
   .toggle-container{
   }
   .toggle-label {
-    font-size: 24px;
   }
 }
 
@@ -35,7 +34,6 @@
   .toggle-container{
   }
   .toggle-label {
-    font-size: 20px;
   }
 }
 

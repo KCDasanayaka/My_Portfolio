@@ -35,7 +35,7 @@
 }
 .ctn-subhead{
     font-size: 0.75rem;
-    margin: auto;
+    margin: 0 0 10px 0;
     padding: 0 5%;
 }
 .cnt-send{
@@ -93,8 +93,8 @@
   }
 
   .cnt-right {
-    width: 70%; /* Slightly reduce the width for tablets */
-    padding: 4%; /* Increase padding for breathing space */
+    width: 90%; /* Slightly reduce the width for tablets */
+    padding: 2%; /* Increase padding for breathing space */
     border-radius: 30px; /* Adjust the border-radius for a smoother look */
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5), 0 1px 2px rgba(0, 0, 0, 0.3); /* Softer shadow */
   }
@@ -127,7 +127,7 @@
   }
 
   .cnt-right {
-    width: 70%; /* Full width for small screens */
+    width: 85%; /* Full width for small screens */
     border-radius: 20px; /* Smaller radius for compact design */
     max-height: none;
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.4), 0 1px 2px rgba(0, 0, 0, 0.2); /* Subtle shadow for mobile */
