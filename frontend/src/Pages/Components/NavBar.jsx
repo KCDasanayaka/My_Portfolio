@@ -60,13 +60,15 @@ function ResponsiveAppBar({ isDarkMode, toggleTheme }) {
       position="fixed"
       sx={{
         top: 0,
-        backgroundColor: isDarkMode ? '#121212' : '#ffffff',
+        backgroundColor: isDarkMode ? 'rgb(30, 36, 43)' : 'rgba(255, 255, 255)',
+
         color: isDarkMode ? '#fff' : '#000',
         padding: { xs: '0px', md: '0 50px' },
         gap: '20px',
         zIndex: 1200,
         boxShadow: 'none',
         fontWeight: 600,
+        
       }}
     >
       <Container maxWidth="xl">

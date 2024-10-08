@@ -90,25 +90,6 @@ const Blog = () => {
                 
               </Link>
             </div>
-              <div className='bg-box1'>
-                <Link to={"https://kavindu.hashnode.dev/how-figma-elevates-uxui-in-modern-web-development"}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="blog-link" // Add className here
-              >
-                  <img src={blogimg2} alt='Project' className='bgImage1' />
-                  <div className="bg-title" style={{margin:'2% 0 0 0', paddingLeft:'5%'}}>
-                    <img src={blog} alt='Figma' className='bg-figma' />
-                    <div className="bg-protop" >
-                      <h3 className='bg-topic1' style={{margin:'auto'}}>Modern UI/UX Design </h3>  
-                      <p className='bg-subtopic' style={{margin:'0'}}>How Figma elevates UI?UX in modern web development</p>
-                    </div>
-                    
-                  </div>
-                </Link>
-                
-                
-              </div>
             </div>
           </div>
       </section>

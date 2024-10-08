@@ -95,7 +95,6 @@ html {
 }
 
 .secLine{
-
   animation: tracking-in-expand 2s ease-in-out both;
   -webkit-animation: tracking-in-expand 2s ease-in-out both;
 }
@@ -195,6 +194,8 @@ html {
   font-size: 4.5rem;
   color: #ffffff;
   margin-bottom: 10px;
+    animation: tracking-in-expand 2s ease-in-out both;
+    -webkit-animation: tracking-in-expand 2s ease-in-out both;
 }
 
 .mw-subhead {

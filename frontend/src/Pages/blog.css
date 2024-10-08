@@ -14,7 +14,8 @@
     font-size: 4.5rem;
     color: var(--text-color);
     margin-bottom: 5px;
-    
+    animation: tracking-in-expand 2s ease-in-out both;
+    -webkit-animation: tracking-in-expand 2s ease-in-out both;
   }
   
   .bg-subhead {
