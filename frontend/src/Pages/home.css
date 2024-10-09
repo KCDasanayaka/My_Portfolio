@@ -82,11 +82,15 @@ html {
 
 .firstLeft .firstLine {
   color: #2AD87F;
-  font-size: 200%;
-  font-weight: 600;
+  font-size: 250%;
+  font-weight: 500;
   margin: auto 0;
 }
-
+.firstLine{
+  font-family: "Pacifico", cursive;
+  font-size: 1rem;
+  letter-spacing: 2px;
+}
 .firstLeft .secLine {
   color: var(--text-color);
   font-size: 300%;
@@ -529,7 +533,7 @@ html {
 
   .firstLeft .firstLine {
     margin-top: 10%;
-    font-size: 120%;
+    font-size: 180%;
   }
 
   .firstLeft .secLine {
@@ -578,7 +582,7 @@ html {
 
   .firstLeft .firstLine {
     margin-top: 15%;
-    font-size: 80%;
+    font-size: 150%;
   }
 
   .firstLeft .secLine {

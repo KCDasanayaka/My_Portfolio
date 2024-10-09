@@ -5,8 +5,12 @@ import ResponsiveAppBar from './Pages/Components/NavBar';
 import Blog from './Pages/Blog';
 import Contact from './Pages/Contact';
 import './App.css';
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+</style>
 
 function App() {
+  
   const [isDarkMode, setIsDarkMode] = useState(false);
 
   const toggleTheme = () => {

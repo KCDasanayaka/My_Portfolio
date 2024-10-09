@@ -37,6 +37,8 @@ import vEditing from '../assets/vEditing.png'
 import magazine from '../assets/Magazine.png'
 import infobash from '../assets/Infobash.png'
 import pini1 from '../assets/Pini-1.png'
+import yt from '../assets/Youtube.png'
+import fb from '../assets/Facebook.png'
 import 'animate.css';
 import { Link, useNavigate } from 'react-router-dom';
 
@@ -190,7 +192,7 @@ const projectData = {
       image: BuildMate,
       titleImg: code,
       githubLink: github,
-      behanceLink: behance
+      behanceLink: link
     },
     {
       id: 3,
@@ -202,7 +204,7 @@ const projectData = {
       image: HostelMngMockup,
       titleImg: code,
       githubLink: github,
-      behanceLink: behance
+      behanceLink: link
     },
     {
       id: 4,
@@ -214,7 +216,7 @@ const projectData = {
       image: TransportMng,
       titleImg: code,
       githubLink: github,
-      behanceLink: behance
+      behanceLink: link
     },
     {
       id: 5,
@@ -226,7 +228,7 @@ const projectData = {
       image: PortFolio,
       titleImg: code,
       githubLink: github,
-      behanceLink: behance
+      behanceLink: link
     },
     // Add more Coding projects here
   ],
@@ -240,8 +242,8 @@ const projectData = {
       description: 'BrandWave is a branding platform that provides tools for creating stunning visual identities.',
       image: ttcover,
       titleImg: vEditing,
-      githubLink: vEditing,
-      behanceLink: behance
+      githubLink: fb,
+      behanceLink: yt
     },
     {
       id: 2,
@@ -252,8 +254,8 @@ const projectData = {
       description: 'CreativeStudio is a design toolkit for freelance designers to create custom design solutions.',
       image: magazine,
       titleImg: vEditing,
-      githubLink: github,
-      behanceLink: behance
+      githubLink: fb,
+      behanceLink: yt
     },
     {
       id: 3,
@@ -264,8 +266,8 @@ const projectData = {
       description: 'CreativeStudio is a design toolkit for freelance designers to create custom design solutions.',
       image: infobash,
       titleImg: vEditing,
-      githubLink: github,
-      behanceLink: behance
+      githubLink: fb,
+      behanceLink: yt
     },
     {
       id: 4,
@@ -276,8 +278,8 @@ const projectData = {
       description: 'CreativeStudio is a design toolkit for freelance designers to create custom design solutions.',
       image: pini1,
       titleImg: vEditing,
-      githubLink: github,
-      behanceLink: behance
+      githubLink: fb,
+      behanceLink: yt
     },
     // Add more Designing projects here
   ]
@@ -447,7 +449,7 @@ const Home = () => {
         <section className='section1'>
           <div className="firstScreen">
             <div className="firstLeft">
-              <p className="firstLine">Hello Everyone</p>
+              <p className="firstLine">hello</p>
               <h1 className="secLine">
                 I’m Kavindu<br />Chathuranga
               </h1>
