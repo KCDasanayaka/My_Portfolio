@@ -281,6 +281,9 @@ const projectData = {
       image: pini1,
       titleImg: vEditing,
       githubLink: fb,
+      Link1: 'https://www.figma.com/proto/ccaAO6hGU5cMsYwYzZBnSd/Untitled?page-id=3%3A4&node-id=3-8&starting-point-node-id=35%3A104&t=DmEB4vwfqbEqjESN-1',
+      Link2: 'https://youtu.be/86xLEf4e_l0',
+      
       behanceLink: yt
     },
     // Add more Designing projects here
