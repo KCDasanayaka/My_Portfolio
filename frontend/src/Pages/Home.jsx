@@ -243,6 +243,8 @@ const projectData = {
       image: ttcover,
       titleImg: vEditing,
       githubLink: fb,
+      Link1: 'https://www.figma.com/proto/ccaAO6hGU5cMsYwYzZBnSd/Untitled?page-id=3%3A4&node-id=3-8&starting-point-node-id=35%3A104&t=DmEB4vwfqbEqjESN-1',
+      Link2: 'https://youtu.be/Od5MwNzt8MQ',
       behanceLink: yt
     },
     {
@@ -561,6 +563,7 @@ const Home = () => {
                       githubLink={project.githubLink}
                       behanceLink={project.behanceLink}
                       Link1={project.Link1}
+                      Link2={project.Link2}
                     />
                   ))}
                 </div>
@@ -579,6 +582,8 @@ const Home = () => {
                       titleImg={project.titleImg}
                       githubLink={project.githubLink}
                       behanceLink={project.behanceLink}
+                      Link1={project.Link1}
+                      Link2={project.Link2}
                     />
                   ))}
                 </div>
@@ -597,6 +602,8 @@ const Home = () => {
                       titleImg={project.titleImg}
                       githubLink={project.githubLink}
                       behanceLink={project.behanceLink}
+                      Link1={project.Link1}
+                      Link2={project.Link2}
                     />
                   ))}
                 </div>
