@@ -230,6 +230,18 @@ const projectData = {
       githubLink: github,
       behanceLink: link
     },
+    {
+      id: 6,
+      category: 'Coding',
+      title: 'DevConnector',
+      Subtitle: 'React Native | Bootstrap',
+      SubDescription:'MyReminder Mobile Application',
+      description: 'DevConnector allows developers to connect, share ideas, and collaborate on open-source projects.',
+      image: PortFolio,
+      titleImg: code,
+      githubLink: github,
+      behanceLink: link
+    },
     // Add more Coding projects here
   ],
   Designing: [
