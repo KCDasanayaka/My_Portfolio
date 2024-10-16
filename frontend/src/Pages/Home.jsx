@@ -39,6 +39,7 @@ import infobash from '../assets/Infobash.png'
 import pini1 from '../assets/Pini-1.png'
 import yt from '../assets/Youtube.png'
 import fb from '../assets/Facebook.png'
+import myReminder from '../assets/MyReminderCover.png'
 import 'animate.css';
 import { Link, useNavigate } from 'react-router-dom';
 
@@ -237,7 +238,7 @@ const projectData = {
       Subtitle: 'React Native | Bootstrap',
       SubDescription:'MyReminder Mobile Application',
       description: 'DevConnector allows developers to connect, share ideas, and collaborate on open-source projects.',
-      image: PortFolio,
+      image: myReminder,
       titleImg: code,
       githubLink: github,
       behanceLink: link
