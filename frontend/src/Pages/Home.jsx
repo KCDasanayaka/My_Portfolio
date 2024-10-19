@@ -181,6 +181,8 @@ const projectData = {
       image: ChatWindow,
       titleImg: code,
       githubLink: github,
+      Link1: 'https://www.figma.com/proto/YBUjUiWHqvipnZHdMsFweW/BuildMate%2B?page-id=75%3A17&node-id=88-112&node-type=frame&viewport=1147%2C656%2C0.24&t=bbNTcTLPR8fH06oR-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=88%3A112',
+      Link2: 'https://github.com/KCDasanayaka',
       behanceLink: link
     },
     {
@@ -193,6 +195,8 @@ const projectData = {
       image: BuildMate,
       titleImg: code,
       githubLink: github,
+      Link1: 'https://www.figma.com/proto/YBUjUiWHqvipnZHdMsFweW/BuildMate%2B?page-id=75%3A17&node-id=88-112&node-type=frame&viewport=1147%2C656%2C0.24&t=bbNTcTLPR8fH06oR-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=88%3A112',
+      Link2: 'https://github.com/KCDasanayaka',
       behanceLink: link
     },
     {
@@ -205,6 +209,8 @@ const projectData = {
       image: HostelMngMockup,
       titleImg: code,
       githubLink: github,
+      Link1: 'https://www.figma.com/proto/YBUjUiWHqvipnZHdMsFweW/BuildMate%2B?page-id=75%3A17&node-id=88-112&node-type=frame&viewport=1147%2C656%2C0.24&t=bbNTcTLPR8fH06oR-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=88%3A112',
+      Link2: 'https://github.com/KCDasanayaka',
       behanceLink: link
     },
     {
@@ -217,6 +223,8 @@ const projectData = {
       image: TransportMng,
       titleImg: code,
       githubLink: github,
+      Link1: 'https://www.figma.com/proto/YBUjUiWHqvipnZHdMsFweW/BuildMate%2B?page-id=75%3A17&node-id=88-112&node-type=frame&viewport=1147%2C656%2C0.24&t=bbNTcTLPR8fH06oR-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=88%3A112',
+      Link2: 'https://github.com/KCDasanayaka',
       behanceLink: link
     },
     {
@@ -229,6 +237,8 @@ const projectData = {
       image: PortFolio,
       titleImg: code,
       githubLink: github,
+      Link1: 'https://www.figma.com/proto/YBUjUiWHqvipnZHdMsFweW/BuildMate%2B?page-id=75%3A17&node-id=88-112&node-type=frame&viewport=1147%2C656%2C0.24&t=bbNTcTLPR8fH06oR-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=88%3A112',
+      Link2: 'https://github.com/KCDasanayaka',
       behanceLink: link
     },
     {
@@ -241,6 +251,8 @@ const projectData = {
       image: myReminder,
       titleImg: code,
       githubLink: github,
+      Link1: 'https://www.figma.com/proto/YBUjUiWHqvipnZHdMsFweW/BuildMate%2B?page-id=75%3A17&node-id=88-112&node-type=frame&viewport=1147%2C656%2C0.24&t=bbNTcTLPR8fH06oR-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=88%3A112',
+      Link2: 'https://github.com/KCDasanayaka',
       behanceLink: link
     },
     // Add more Coding projects here
