@@ -126,7 +126,20 @@ const projectData = {
       Link2: 'https://github.com/KCDasanayaka',
       behanceLink: behance
     },
-    
+    {
+      id: 4,
+      category: 'UI',
+      title: 'DesignHub',
+      Subtitle: 'UI Design',
+      SubDescription:'Personal Portfolio Design',
+      description: 'DesignHub is a collaborative platform that connects designers with clients seeking creative solutions.',
+      image: PortFolio,
+      titleImg: figma,
+      githubLink: figma2,
+      Link1: 'https://www.figma.com/proto/K5NtqALbLhOTDnqUL1aCwY/Untitled?page-id=0%3A1&node-id=54-61&node-type=frame&viewport=851%2C402%2C0.07&t=ya8GzjEhWpicWa48-1&scaling=scale-down&content-scaling=fixed',
+      Link2: 'https://www.behance.net/gallery/208481691/Personal-Portfolio-Page',
+      behanceLink: behance
+    },
     {
       id: 5,
       category: 'UI',
