@@ -282,7 +282,10 @@ const projectData = {
       image: magazine,
       titleImg: vEditing,
       githubLink: fb,
-      behanceLink: yt
+      behanceLink: yt,
+      
+      Link1: 'https://www.facebook.com/share/v/8ZyHSdfGec9Tsmv9/',
+      Link2: 'https://youtu.be/86xLEf4e_l0',
     },
     {
       id: 3,
@@ -294,7 +297,10 @@ const projectData = {
       image: infobash,
       titleImg: vEditing,
       githubLink: fb,
-      behanceLink: yt
+      behanceLink: yt,
+      
+      Link1: 'https://www.facebook.com/share/v/8ZyHSdfGec9Tsmv9/',
+      Link2: 'https://youtu.be/86xLEf4e_l0',
     },
     {
       id: 4,
@@ -306,7 +312,7 @@ const projectData = {
       image: pini1,
       titleImg: vEditing,
       githubLink: fb,
-      Link1: 'https://www.figma.com/proto/ccaAO6hGU5cMsYwYzZBnSd/Untitled?page-id=3%3A4&node-id=3-8&starting-point-node-id=35%3A104&t=DmEB4vwfqbEqjESN-1',
+      Link1: 'https://www.facebook.com/share/v/8ZyHSdfGec9Tsmv9/',
       Link2: 'https://youtu.be/86xLEf4e_l0',
       
       behanceLink: yt
