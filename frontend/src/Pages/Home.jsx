@@ -123,7 +123,7 @@ const projectData = {
       titleImg: figma,
       githubLink: figma2,
       Link1: 'https://www.figma.com/proto/Xb28kCx0SSeSD6hPbKq5HM/Untitled?page-id=0%3A1&node-id=141-23&node-type=frame&viewport=3268%2C-3669%2C0.89&t=BmkFCWNtHnhZygIe-1&scaling=scale-down&content-scaling=fixed',
-      Link2: 'https://github.com/KCDasanayaka',
+      Link2: 'https://www.behance.net/gallery/211069593/Transport-Management-Platform-Landing-Page-Design',
       behanceLink: behance
     },
     {
