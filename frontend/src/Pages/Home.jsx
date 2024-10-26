@@ -40,6 +40,7 @@ import pini1 from '../assets/Pini-1.png'
 import yt from '../assets/Youtube.png'
 import fb from '../assets/Facebook.png'
 import myReminder from '../assets/MyReminderCover.png'
+import InspireIEEE from '../assets/InspireIEEE.png'
 import 'animate.css';
 import { Link, useNavigate } from 'react-router-dom';
 
@@ -57,6 +58,7 @@ const StyledButton = styled(Button)(({ active }) => ({
   fontSize: '1.2rem', // Use relative units for font size
   fontWeight: 600,
   color: '#000000',
+  lineHeight:'20px',
   transition: 'all 0.3s ease',
   ...(active && {
     borderColor: '#2AD87F',
@@ -71,6 +73,7 @@ const StyledButton = styled(Button)(({ active }) => ({
     padding: '0.75em 1.5em', // Adjust padding
     fontSize: '0.7rem', // Adjust font size
     borderRadius: '30px',
+    lineHeight:'12px',
   },
 
   '@media (min-width: 600px) and (max-width: 960px)': { // Tablet screens
@@ -78,6 +81,7 @@ const StyledButton = styled(Button)(({ active }) => ({
     padding: '0.5em 1em',
     fontSize: '1rem',
     borderRadius: '20px',
+    lineHeight:'15px',
   },
 }));
 
@@ -316,6 +320,21 @@ const projectData = {
       Link2: 'https://youtu.be/86xLEf4e_l0',
       
       behanceLink: yt
+    },
+    {
+      id: 5,
+      category: 'Designing',
+      title: 'CreativeStudio',
+      Subtitle: 'InspireIEEE Flyer Series',
+      SubDescription:'"InspireIEEE 2024 Volunteer Awareness Session Flyer series',
+      description: 'CreativeStudio is a design toolkit for freelance designers to create custom design solutions.',
+      image: InspireIEEE,
+      titleImg: vEditing,
+      githubLink: fb,
+      Link1: 'https://www.facebook.com/photo.php?fbid=853044933293331&set=pb.100057634952088.-2207520000&type=3',
+      Link2: 'https://www.behance.net/gallery/211097671/Academic-Workshop-Flyer-Design',
+      
+      behanceLink: behance
     },
     // Add more Designing projects here
   ]
@@ -578,7 +597,7 @@ const Home = () => {
                 active={activeButton === 'Designing'}
                 onClick={() => handleClick('Designing')}
               >
-                Designing
+                Content Creation
               </StyledButton>
             </div>
 
