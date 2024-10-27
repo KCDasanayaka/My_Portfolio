@@ -214,7 +214,7 @@ const projectData = {
       titleImg: code,
       githubLink: github,
       Link1: 'https://github.com/KCDasanayaka/Hostel_Management_WebSite.git',
-      Link2: 'https://github.com/KCDasanayaka',
+      Link2: 'https://vercel.com/api/toolbar/link/hostel-management-web-site-uosu.vercel.app?via=deployment-domains-list&p=1&page=/',
       behanceLink: link
     },
     {
@@ -228,7 +228,7 @@ const projectData = {
       titleImg: code,
       githubLink: github,
       Link1: 'https://github.com/KCDasanayaka/Public_Transport_Management-Website.git',
-      Link2: 'https://github.com/KCDasanayaka',
+      Link2: 'https://connectbox.netlify.app/',
       behanceLink: link
     },
     {
@@ -242,7 +242,7 @@ const projectData = {
       titleImg: code,
       githubLink: github,
       Link1: 'https://github.com/KCDasanayaka/My_Portfolio.git',
-      Link2: 'https://github.com/KCDasanayaka',
+      Link2: 'https://kavinduchathuranga.netlify.app/',
       behanceLink: link
     },
     {
