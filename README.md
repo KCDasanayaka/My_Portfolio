@@ -51,8 +51,13 @@ npm start
   <hr>
 
   <h2>🤝 Connect with Me</h2>
-  <p>Feel free to connect with me on <a href="https://www.linkedin.com/in/kavindu-dasanayaka-6a6735285" target="_blank">LinkedIn</a> and check out my work! Let’s build something amazing together!</p>
-
+  <p>Feel free to connect with me on these platforms!</p>
+  <ul>
+    <li><a href="https://www.linkedin.com/in/kavindu-dasanayaka-6a6735285" target="_blank">LinkedIn</a></li>
+    <li><a href="https://www.behance.net/kavindudasanay" target="_blank">Behance</a></li>
+    <li><a href="https://dribbble.com/Kavindu_Chathuranga_01">Dribbble</a></li>
+  </ul>
+  
   <p>Thank you for visiting! 😊</p>
 
 </body>
