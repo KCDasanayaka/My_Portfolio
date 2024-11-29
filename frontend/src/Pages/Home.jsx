@@ -273,6 +273,20 @@ const projectData = {
       Link2: 'https://github.com/KCDasanayaka',
       behanceLink: link
     },
+    {
+      id: 7,
+      category: 'Coding',
+      title: 'DevConnector',
+      Subtitle: 'Jupyter Notebook | Python',
+      SubDescription:'Image Classification Application',
+      description: 'DevConnector allows developers to connect, share ideas, and collaborate on open-source projects.',
+      image: myReminder,
+      titleImg: code,
+      githubLink: github,
+      Link1: 'https://github.com/KCDasanayaka/Image_Classification',
+      Link2: 'https://github.com/KCDasanayaka',
+      behanceLink: link
+    },
     // Add more Coding projects here
   ],
   Designing: [
