@@ -172,6 +172,20 @@ const projectData = {
       Link2: 'https://github.com/KCDasanayaka',
       behanceLink: behance
     },
+    {
+      id: 7,
+      category: 'UI',
+      title: 'DesignHub',
+      Subtitle: 'UI Design',
+      SubDescription:'LMS Web Site',
+      description: 'DesignHub is a collaborative platform that connects designers with clients seeking creative solutions.',
+      image: BuildMate,
+      titleImg: figma,
+      githubLink: figma2,
+      Link1: 'https://www.figma.com/design/qdeLnUHQQn9TaYQBOjn12D/LMS?node-id=1-2&t=bJwOpSALbleCnTk2-1',
+      Link2: 'https://github.com/KCDasanayaka',
+      behanceLink: behance
+    },
     // Add more UI projects here
   ],
   Coding: [
