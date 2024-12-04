@@ -41,6 +41,7 @@ import yt from '../assets/Youtube.png'
 import fb from '../assets/Facebook.png'
 import myReminder from '../assets/MyReminderCover.png'
 import InspireIEEE from '../assets/InspireIEEE.png'
+import lms from '../assets/Lms.png'
 import 'animate.css';
 import { Link, useNavigate } from 'react-router-dom';
 
@@ -179,7 +180,7 @@ const projectData = {
       Subtitle: 'UI Design',
       SubDescription:'LMS Web Site',
       description: 'DesignHub is a collaborative platform that connects designers with clients seeking creative solutions.',
-      image: BuildMate,
+      image: lms,
       titleImg: figma,
       githubLink: figma2,
       Link1: 'https://www.figma.com/design/qdeLnUHQQn9TaYQBOjn12D/LMS?node-id=1-2&t=bJwOpSALbleCnTk2-1',
