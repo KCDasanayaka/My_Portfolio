@@ -42,6 +42,7 @@ import fb from '../assets/Facebook.png'
 import myReminder from '../assets/MyReminderCover.png'
 import InspireIEEE from '../assets/InspireIEEE.png'
 import lms from '../assets/Lms.png'
+import pearlhack from '../assets/Final.jpg'
 import 'animate.css';
 import { Link, useNavigate } from 'react-router-dom';
 
@@ -375,6 +376,21 @@ const projectData = {
       titleImg: vEditing,
       githubLink: fb,
       Link1: 'https://www.facebook.com/photo.php?fbid=853044933293331&set=pb.100057634952088.-2207520000&type=3',
+      Link2: 'https://www.behance.net/gallery/211097671/Academic-Workshop-Flyer-Design',
+      
+      behanceLink: behance
+    },
+    {
+      id: 6,
+      category: 'Designing',
+      title: 'CreativeStudio',
+      Subtitle: 'Pearlhack_v3.0 Trailer',
+      SubDescription:'"InspireIEEE 2024 Volunteer Awareness Session Flyer series',
+      description: 'CreativeStudio is a design toolkit for freelance designers to create custom design solutions.',
+      image: pearlhack,
+      titleImg: vEditing,
+      githubLink: fb,
+      Link1: 'https://www.facebook.com/watch/?v=1622469818707362',
       Link2: 'https://www.behance.net/gallery/211097671/Academic-Workshop-Flyer-Design',
       
       behanceLink: behance
