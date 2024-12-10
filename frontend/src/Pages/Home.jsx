@@ -303,6 +303,20 @@ const projectData = {
       Link2: 'https://github.com/KCDasanayaka',
       behanceLink: link
     },
+    {
+      id: 8,
+      category: 'Coding',
+      title: 'DevConnector',
+      Subtitle: 'MERN | Tailwind',
+      SubDescription:'LMS Web Site',
+      description: 'DevConnector allows developers to connect, share ideas, and collaborate on open-source projects.',
+      image: lms,
+      titleImg: code,
+      githubLink: github,
+      Link1: 'https://github.com/KCDasanayaka/Image_Classification',
+      Link2: 'https://github.com/KCDasanayaka',
+      behanceLink: link
+    },
     // Add more Coding projects here
   ],
   Designing: [
