@@ -31,7 +31,7 @@ import code from '../assets/code.png';
 import figma from '../assets/figma.png';
 import figma2 from '../assets/Figma.2.png';
 import link from '../assets/Link.1.png';
-import mycv from '../assets/UI_20APC4645_Kavindu Chathuranga.pdf';
+import mycv from '../assets/UiUx_KavinduChathuranga_CV.pdf';
 import ttcover from '../assets/Tabel-Tennis.png';
 import vEditing from '../assets/vEditing.png'
 import magazine from '../assets/Magazine.png'
