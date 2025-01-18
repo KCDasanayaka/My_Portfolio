@@ -45,6 +45,7 @@ import lms from '../assets/Lms.png'
 import pearlhack from '../assets/Final.jpg'
 import 'animate.css';
 import { Link, useNavigate } from 'react-router-dom';
+import { motion } from "framer-motion";
 
 // StyledButton component definition
 
@@ -330,7 +331,7 @@ const projectData = {
       image: ttcover,
       titleImg: vEditing,
       githubLink: fb,
-      Link1: 'https://www.figma.com/proto/ccaAO6hGU5cMsYwYzZBnSd/Untitled?page-id=3%3A4&node-id=3-8&starting-point-node-id=35%3A104&t=DmEB4vwfqbEqjESN-1',
+      Link1: 'https://fb.watch/xaZqFKdwV1/',
       Link2: 'https://youtu.be/Od5MwNzt8MQ',
       behanceLink: yt
     },
@@ -647,9 +648,27 @@ const Home = () => {
         </div>
         </section>
         <section className='section2'id= 'projects'>
+        <motion.div>
           <div className="myWorks">
-            <h1 className='mw-head'>My WORKS</h1>
-            <p className='mw-subhead'>Journey through my digital innovations and creative explorations</p>
+
+            <motion.h1
+              className="mw-head"
+              initial={{ opacity: 0, y: -20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, ease: "easeOut" }}
+            >
+              My WORKS
+            </motion.h1>
+
+            <motion.p
+              className="mw-subhead"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 0.5, duration: 1 }}
+            >
+              Journey through my digital innovations and creative explorations
+            </motion.p>
+
             <div className="mw-btngroup">
               <StyledButton
                 variant="outlined"
@@ -736,6 +755,8 @@ const Home = () => {
               )}
             </div>
           </div>
+        </motion.div>
+          
         </section>
         <section className='section3' id='aboutMe'>
           <div class="custom-shape-divider-top-1726385316">
