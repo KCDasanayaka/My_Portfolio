@@ -116,7 +116,7 @@ const projectData = {
       titleImg: figma,
       githubLink: figma2,
       Link1: 'https://www.figma.com/proto/xFSKmdnR8GDVw0an7OkTNv/Pixel-Pioneers?page-id=4%3A2&node-id=129-153&node-type=frame&viewport=495%2C239%2C0.1&t=QwkX2xLQ3qASQn6q-1&scaling=min-zoom&content-scaling=fixed&starting-point-node-id=129%3A153',
-      Link2: 'https://github.com/KCDasanayaka',
+      Link2: 'https://www.behance.net/kavindudasanay',
       behanceLink: behance
     },
     {
@@ -158,7 +158,7 @@ const projectData = {
       titleImg: figma,
       githubLink: figma2,
       Link1: 'https://www.figma.com/proto/dgkexxjmRaHq62ammRQvd4/IS3109-Group-01-Chemical-Industry?page-id=201%3A62&node-id=652-1755&starting-point-node-id=652%3A1755&t=FRFcZf5nPr4OBIg3-1',
-      Link2: 'https://github.com/KCDasanayaka',
+      Link2: 'https://www.behance.net/kavindudasanay',
       behanceLink: behance
     },
     {
@@ -172,7 +172,7 @@ const projectData = {
       titleImg: figma,
       githubLink: figma2,
       Link1: 'https://www.figma.com/proto/YBUjUiWHqvipnZHdMsFweW/BuildMate%2B?page-id=75%3A17&node-id=88-112&node-type=frame&viewport=1147%2C656%2C0.24&t=bbNTcTLPR8fH06oR-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=88%3A112',
-      Link2: 'https://github.com/KCDasanayaka',
+      Link2: 'https://www.behance.net/kavindudasanay',
       behanceLink: behance
     },
     {
@@ -186,7 +186,7 @@ const projectData = {
       titleImg: figma,
       githubLink: figma2,
       Link1: 'https://www.figma.com/design/qdeLnUHQQn9TaYQBOjn12D/LMS?node-id=1-2&t=bJwOpSALbleCnTk2-1',
-      Link2: 'https://github.com/KCDasanayaka',
+      Link2: 'https://www.behance.net/kavindudasanay',
       behanceLink: behance
     },
     // Add more UI projects here
