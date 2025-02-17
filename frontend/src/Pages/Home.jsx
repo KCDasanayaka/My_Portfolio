@@ -20,6 +20,7 @@ import react from '../assets/pngegg.png';
 import pr from '../assets/pngegg (9).png';
 import ae from '../assets/pngegg (10).png';
 import ps from '../assets/pngegg (11).png';
+import UGC from '../assets/iMac_Mockup_3.png';
 import Tourism from '../assets/Tourism.png';
 import PortFolio from '../assets/PortFolio1.png';
 import BuildMate from '../assets/BuildMate.png';
@@ -172,7 +173,7 @@ const projectData = {
       titleImg: figma,
       githubLink: figma2,
       Link1: 'https://www.figma.com/proto/YBUjUiWHqvipnZHdMsFweW/BuildMate%2B?page-id=75%3A17&node-id=88-112&node-type=frame&viewport=1147%2C656%2C0.24&t=bbNTcTLPR8fH06oR-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=88%3A112',
-      Link2: 'https://www.behance.net/kavindudasanay',
+      Link2: 'https://www.behance.net/gallery/219426941/BuildMate-Construction-Enablement-Platform',
       behanceLink: behance
     },
     {
@@ -187,6 +188,20 @@ const projectData = {
       githubLink: figma2,
       Link1: 'https://www.figma.com/design/qdeLnUHQQn9TaYQBOjn12D/LMS?node-id=1-2&t=bJwOpSALbleCnTk2-1',
       Link2: 'https://www.behance.net/kavindudasanay',
+      behanceLink: behance
+    },
+    {
+      id: 8,
+      category: 'UI',
+      title: 'DesignHub',
+      Subtitle: 'UI Design',
+      SubDescription:'UGC WebSite Redesign',
+      description: 'DesignHub is a collaborative platform that connects designers with clients seeking creative solutions.',
+      image: UGC,
+      titleImg: figma,
+      githubLink: figma2,
+      Link1: 'https://www.figma.com/design/kWQuZdeKlxaY2YUa4b3cLc/UGC-Website-Redesign?node-id=0-1&t=taXzqOwckZZKpa7Y-1',
+      Link2: 'https://www.behance.net/gallery/219288223/UGC-Website-Redesign',
       behanceLink: behance
     },
     // Add more UI projects here
